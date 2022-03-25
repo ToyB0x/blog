@@ -3,6 +3,9 @@
   "display": "Nest.js",
   "extends": "./base.json",
   "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "experimentalDecorators": true,
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
