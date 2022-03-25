@@ -3,24 +3,11 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es2017",
+    "outDir": "./dist",
+    "baseUrl": "./",
     "experimentalDecorators": true,
-
-// NOTE: belows are nest.js default options
-//    "declaration": true,
-//    "removeComments": true,
-//    "emitDecoratorMetadata": true,
-//    "allowSyntheticDefaultImports": true,
-//    "sourceMap": true,
-//    "outDir": "./dist",
-//    "baseUrl": "./",
-//    "incremental": true,
-//    "skipLibCheck": true,
-//    "strictNullChecks": false,
-//    "noImplicitAny": false,
-//    "strictBindCallApply": false,
-//    "forceConsistentCasingInFileNames": false,
-//    "noFallthroughCasesInSwitch": false
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }
+
