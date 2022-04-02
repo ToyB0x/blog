@@ -29,6 +29,7 @@
     "contentlayer": "^0.2.1",
     "next-contentlayer": "^0.2.1",
     "next-transpile-modules": "9.0.0",
+    "remark-gfm": "^3.0.1",
     "tsconfig": "*"
   }
 }
