@@ -20,7 +20,7 @@ const Index = () => {
         />
       </Head>
 
-      <Center h="100vh">
+      <Center h="100vh" backgroundColor="black">
         <VStack spacing={10}>
           <NeonHeader />
           <Links />
