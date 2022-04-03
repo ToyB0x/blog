@@ -16,6 +16,6 @@ export const Links = () => (
       href="https://www.instagram.com/toyb0x_/"
       icon={FiInstagram}
     />
-    <NeonLinkIcon href="https://google.com" icon={FiFileText} />
+    <NeonLinkIcon href="/posts" icon={FiFileText} />
   </SimpleGrid>
 )
