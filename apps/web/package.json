@@ -24,7 +24,7 @@
     "ui": "*"
   },
   "devDependencies": {
-    "@mdx-js/react": "1.6.22",
+    "@mdx-js/react": "2.1.1",
     "config": "*",
     "contentlayer": "^0.2.1",
     "next-contentlayer": "^0.2.1",
