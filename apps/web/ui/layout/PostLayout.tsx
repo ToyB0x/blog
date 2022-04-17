@@ -19,7 +19,7 @@ export const PostLayout: FC<Props> = ({ post }) => {
         <title>{post.title}</title>
       </Head>
 
-      <Stack spacing={2}>
+      <Stack spacing={4}>
         <Box as="time" fontSize="sm" color="gray.600" dateTime={post.date}>
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </Box>
