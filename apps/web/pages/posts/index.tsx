@@ -1,8 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { compareDesc, format, parseISO } from 'date-fns'
+import { compareDesc } from 'date-fns'
 import { allPosts, Post } from 'contentlayer/generated'
 import { GetStaticProps } from 'next'
+import { Stack } from '@chakra-ui/react'
+import { BlogLayout } from '../../components/layout'
+import { FC } from 'react'
+import { PostItem } from '../../components/pages/posts'
 
 type Props = {
   posts: Post[]
@@ -15,34 +18,18 @@ export const getStaticProps: GetStaticProps<Props> = () => {
   return { props: { posts: sortedPosts } }
 }
 
-const PostCard = (post: Post) => {
-  return (
-    <>
-      <time dateTime={post.date} className="block text-sm text-gray-600">
-        {format(parseISO(post.date), 'LLLL d, yyyy')}
-      </time>
-      <h2>
-        <Link href={post.url}>
-          <a>{post.title}</a>
-        </Link>
-      </h2>
-    </>
-  )
-}
+export const Index: FC<Props> = ({ posts }) => (
+  <BlogLayout>
+    <Head>
+      <title>記事一覧</title>
+    </Head>
 
-export const Index = (props: Props) => {
-  const { posts } = props
-  return (
-    <>
-      <Head>
-        <title>Contentlayer Blog Example</title>
-      </Head>
-
+    <Stack spacing={8} mt={12}>
       {posts.map((post, idx) => (
-        <PostCard key={idx} {...post} />
+        <PostItem key={idx} {...post} />
       ))}
-    </>
-  )
-}
+    </Stack>
+  </BlogLayout>
+)
 
 export default Index
