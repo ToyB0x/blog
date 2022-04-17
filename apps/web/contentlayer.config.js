@@ -16,6 +16,10 @@ export const Post = defineDocumentType(() => ({
       description: 'The date of the post',
       required: true,
     },
+    photo: {
+      type: 'string',
+      required: false,
+    },
   },
   computedFields: {
     url: {
