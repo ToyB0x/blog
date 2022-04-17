@@ -2,6 +2,13 @@ import { extendTheme } from '@chakra-ui/react'
 import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools'
 
 const customTheme = extendTheme({
+  components: {
+    Container: {
+      baseStyle: {
+        maxW: '600px',
+      },
+    },
+  },
   fonts: {
     heading: 'Inter, sans-serif',
     body: 'Inter, sans-serif',

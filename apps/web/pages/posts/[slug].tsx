@@ -1,9 +1,7 @@
-import Head from 'next/head'
 import { allPosts, Post } from 'contentlayer/generated'
-import { useMDXComponent } from 'next-contentlayer/hooks'
-import { MDXComponents } from '@mdx-lib/chakra'
 import { GetStaticPaths, GetStaticProps } from 'next'
-
+import { BlogLayout } from '../../components/layout'
+import { PostLayout } from '../../components/layout'
 type Props = {
   post: Post
 }
@@ -24,20 +22,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-const PostLayout = (props: Props) => {
-  const { post } = props
-  const MDXComponent = useMDXComponent(post.body.code)
+const Post = (props: Props) => (
+  <BlogLayout>
+    <PostLayout post={props.post} />
+  </BlogLayout>
+)
 
-  return (
-    <>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
-      <article>
-        <MDXComponent components={MDXComponents} />
-      </article>
-    </>
-  )
-}
-
-export default PostLayout
+export default Post
