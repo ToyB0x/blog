@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { Box, Heading, Image, Stack } from '@chakra-ui/react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { format, parseISO } from 'date-fns'
@@ -15,10 +14,6 @@ export const PostLayout: FC<Props> = ({ post }) => {
 
   return (
     <>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
-
       <Stack spacing={4}>
         <Box as="time" fontSize="sm" color="gray.600" dateTime={post.date}>
           {format(parseISO(post.date), 'LLLL d, yyyy')}
