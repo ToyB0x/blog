@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { compareDesc } from 'date-fns'
 import { allPosts, Post } from 'contentlayer/generated'
 import { GetStaticProps } from 'next'
-import { Page } from '../ui/pages/posts'
+import { Page } from '../ui/pages/index'
 import { FC } from 'react'
 
 type Props = {
