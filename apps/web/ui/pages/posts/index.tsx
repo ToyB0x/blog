@@ -1,9 +1,9 @@
-import { BlogLayout } from '../../../components/layout/BlogLayout'
 import { Stack } from '@chakra-ui/react'
 import { PostWithContinueMask } from './PostWithContinueMask'
 import { Footer } from './Footer'
 import { Post } from 'contentlayer/generated'
 import { FC } from 'react'
+import { BlogLayout } from '../../layout/BlogLayout'
 
 type Props = {
   posts: Post[]

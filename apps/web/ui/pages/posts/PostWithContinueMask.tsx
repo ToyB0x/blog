@@ -1,8 +1,8 @@
 import { Box, Divider } from '@chakra-ui/react'
 import { Post } from 'contentlayer/generated'
 import Link from 'next/link'
-import { PostLayout } from '../../../components/layout/PostLayout'
 import { ContinueMask } from './ContinueMask'
+import { PostLayout } from '../../layout/PostLayout'
 
 export const PostWithContinueMask = (post: Post) => (
   <>
