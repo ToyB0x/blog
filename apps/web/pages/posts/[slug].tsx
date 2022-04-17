@@ -1,8 +1,7 @@
 import { allPosts, Post } from 'contentlayer/generated'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { BlogLayout } from '../../ui/layout/BlogLayout'
-import { PostLayout } from '../../ui/layout/PostLayout'
-
+import { BlogLayout } from '../../components/layout'
+import { PostLayout } from '../../components/layout'
 type Props = {
   post: Post
 }

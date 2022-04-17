@@ -1,6 +1,6 @@
 import { Container } from '@chakra-ui/react'
 import { FC } from 'react'
-import { Header } from '../components/header'
+import { Header } from '../common'
 
 export const BlogLayout: FC = (props) => (
   <>
