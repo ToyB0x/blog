@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Stack } from '@chakra-ui/react'
+import { Box, Heading, Stack } from '@chakra-ui/react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { format, parseISO } from 'date-fns'
 import { MDXComponents } from '@mdx-lib/chakra'
@@ -14,16 +14,11 @@ export const PostLayout: FC<Props> = ({ post }) => {
 
   return (
     <>
-      <Stack spacing={4}>
+      <Stack>
+        <Heading isTruncated>{post.title}</Heading>
         <Box as="time" fontSize="sm" color="gray.600" dateTime={post.date}>
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </Box>
-
-        <Heading isTruncated>{post.title}</Heading>
-
-        {post.photo && (
-          <Image src={post.photo} borderRadius="xl" alt="post header image" />
-        )}
       </Stack>
 
       <MDXComponent components={MDXComponents} />
