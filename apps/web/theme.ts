@@ -5,7 +5,7 @@ const customTheme = extendTheme({
   components: {
     Container: {
       baseStyle: {
-        maxW: '600px',
+        maxW: '560px',
       },
     },
   },
