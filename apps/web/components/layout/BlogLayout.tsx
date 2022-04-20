@@ -2,7 +2,11 @@ import { Container } from '@chakra-ui/react'
 import { FC } from 'react'
 import { Header } from '../common'
 
-export const BlogLayout: FC = (props) => (
+type Props = {
+  children: React.ReactNode
+}
+
+export const BlogLayout: FC<Props> = (props) => (
   <>
     <Header />
     <Container {...props} />
