@@ -1260,7 +1260,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.1.0.tgz#56d99c41f0a1cda2726a05aa6a20afd4c63e58d2"
   integrity sha512-u0AX4aSo25sMAygCuQTzS+HsImZFuS8llY8O7b9MDRzbJM0kVJlAz6KNDqcG7pOuQZJmj/8X/rAW+66kMnMW+g==
 
-"@emotion/styled@^11":
+"@emotion/styled@11.8.1":
   version "11.8.1"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.8.1.tgz#856f6f63aceef0eb783985fa2322e2bf66d04e17"
   integrity sha512-OghEVAYBZMpEquHZwuelXcRjRJQOVayvbmNR0zr174NHdmMgrNkLC6TljKC5h9lZLkN5WGrdUcrKlOJ4phhoTQ==
@@ -2439,7 +2439,7 @@
   resolved "https://registry.yarnpkg.com/@types/warning/-/warning-3.0.0.tgz#0d2501268ad8f9962b740d387c4654f5f8e23e52"
   integrity sha1-DSUBJorY+ZYrdA04fEZU9fjiPlI=
 
-"@types/webfontloader@^1.6.34":
+"@types/webfontloader@1.6.34":
   version "1.6.34"
   resolved "https://registry.yarnpkg.com/@types/webfontloader/-/webfontloader-1.6.34.tgz#3ad1530c3cf2827d3ed80679b4f8c688e6c6957c"
   integrity sha512-yNIPDl3P1yK/ag9C8CdleEhWrtU1myGr3cxb0yEBN/tkCYoGP5PbQa53mQCXcOLFAvBFzJJQfuEahOZ0ARakqw==
@@ -7483,7 +7483,7 @@ remark-frontmatter@^4.0.1:
     micromark-extension-frontmatter "^1.0.0"
     unified "^10.0.0"
 
-remark-gfm@^3.0.1:
+remark-gfm@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/remark-gfm/-/remark-gfm-3.0.1.tgz#0b180f095e3036545e9dddac0e8df3fa5cfee54f"
   integrity sha512-lEFDoi2PICJyNrACFOfDD3JlLkuSbOa5Wd8EPt06HUdptv8Gn0bxYTdbU/XXQ3swAPkEaGxxPN9cbnMHvVu1Ig==
@@ -8136,7 +8136,7 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-tocbot@^4.18.2:
+tocbot@4.18.2:
   version "4.18.2"
   resolved "https://registry.yarnpkg.com/tocbot/-/tocbot-4.18.2.tgz#e98bb4120fae02f0e4a01d3acff03f3db2ba3ad9"
   integrity sha512-bWUfEYQZ4oFgT+qZYvzlTgbsTmA645ApHbo1iRaOBUeFfy5IpctgAQQjCXbPZy+4RDZ1JJYlIBgoApZMzMaYog==
