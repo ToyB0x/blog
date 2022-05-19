@@ -15,7 +15,7 @@ export const PostLayout: FC<Props> = ({ post }) => {
   return (
     <Box mb={8}>
       <Stack>
-        <Heading isTruncated>{post.title}</Heading>
+        <Heading noOfLines={1}>{post.title}</Heading>
         <Box as="time" fontSize="sm" color="gray.600" dateTime={post.date}>
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </Box>
