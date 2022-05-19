@@ -13,7 +13,7 @@ export const PostLayout: FC<Props> = ({ post }) => {
   const MDXComponent = useMDXComponent(post.body.code)
 
   return (
-    <>
+    <Box mb={8}>
       <Stack>
         <Heading isTruncated>{post.title}</Heading>
         <Box as="time" fontSize="sm" color="gray.600" dateTime={post.date}>
@@ -22,6 +22,6 @@ export const PostLayout: FC<Props> = ({ post }) => {
       </Stack>
 
       <MDXComponent components={MDXComponents} />
-    </>
+    </Box>
   )
 }
