@@ -19,7 +19,7 @@ Next以外のフレームワーク(Gatsby等)に乗り換える際にもその�
 メタ情報の記載についてはFrontmatterを利用しています。
 ちなみに、以下のようにTypeScriptで定義することもできます。
 
-ですが、ContentLayerを使えばFrontmatterの型チェックが出来るので、より一般的なFrontmatterを採用しました。
+ContentLayerを使えばFrontmatterの型チェックが出来るので、より一般的なFrontmatterを採用しました。
 (将来シンプルなマークダウンへと移行したい場合も対応が楽)
 
 ```ts
@@ -37,7 +37,7 @@ const meta: Meta = {
 # MDXファイルの読込み
 とあるOSSのソースコードを眺めているとContentLayerというパッケージを利用してMDXファイルを読み込んでいることに気付きました。
 
-こいつを使うことで`fs.readFile`のようなnodejsレベルのコードを書く手間が省けます。利用例は以下です。
+ContentLayerを使うことで`fs.readFile`のようなnodejsレベルのコードを書く手間が省けます。利用例は以下です。
 
 ```tsx
 // posts/[slug].tsx
