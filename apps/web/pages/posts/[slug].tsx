@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { BlogLayout } from '../../components/layout'
 import { PostLayout } from '../../components/layout'
 import Head from 'next/head'
+
 type Props = {
   post: Post
 }

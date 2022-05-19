@@ -58,7 +58,7 @@ const customTheme = extendTheme({
       mb: '.25rem',
       lineHeight: 1.2,
       fontWeight: 'bold',
-      fontSize: '1.875rem',
+      fontSize: '1.65rem',
       letterSpacing: '-.025em',
     },
     h2: {
