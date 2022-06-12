@@ -108,7 +108,7 @@ const customTheme = extendTheme({
       my: '1.8rem',
     },
     ul: {
-      mt: '1.8rem',
+      mt: '1rem',
       ml: '1.25rem',
       'blockquote &': { mt: 0 },
       '& > * + *': {
