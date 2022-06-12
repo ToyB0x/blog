@@ -9,6 +9,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <title>Welcome to blog!</title>
+        <link rel="shortcut icon" href="/favicons/favicon.ico" />
       </Head>
 
       <ChakraProvider theme={theme}>
