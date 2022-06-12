@@ -30,6 +30,7 @@ const Post = (props: Props) => (
       <title>{props.post.title}</title>
       <meta property="og:title" content={props.post.title} />
       <meta property="og:type" content="website" />
+      <meta property="og:description" content={props.post.description} />
     </Head>
 
     <BlogLayout>
