@@ -20,6 +20,10 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       required: false,
     },
+    description: {
+      type: 'string',
+      required: true,
+    },
   },
   computedFields: {
     url: {
