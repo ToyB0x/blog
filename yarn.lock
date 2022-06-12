@@ -1635,10 +1635,10 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
-"@mdx-lib/chakra@0.0.2-alpha.3":
-  version "0.0.2-alpha.3"
-  resolved "https://registry.yarnpkg.com/@mdx-lib/chakra/-/chakra-0.0.2-alpha.3.tgz#1b78b6646d7c90c835875593e59ae61d384e2c0b"
-  integrity sha512-Ycgy3fZCnDOgo4wnCJLsc7RIv9d6wLGLaahRarrggecMT5QQyTVNltPZZ6t9AX+9UDHwAuf/+eSibZYZKSmyLw==
+"@mdx-lib/chakra@0.0.2-alpha.4":
+  version "0.0.2-alpha.4"
+  resolved "https://registry.yarnpkg.com/@mdx-lib/chakra/-/chakra-0.0.2-alpha.4.tgz#b1773ad6529909511e3140c8751f7e603221c4a4"
+  integrity sha512-utkwhJtt3BETcLQ1FGjLIM1pVAq9rxeihirKPll7q50Kli6yLwc6E3v1Rp92xANAcsQhjat+5MZ0wbLyStuUdw==
 
 "@nestjs/cli@8.2.6":
   version "8.2.6"
