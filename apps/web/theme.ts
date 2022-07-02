@@ -57,20 +57,20 @@ const customTheme = extendTheme({
       mt: '1.8rem',
       lineHeight: 1.2,
       fontWeight: 'bold',
-      fontSize: '1.65rem',
+      fontSize: '2rem',
       letterSpacing: '-.025em',
     },
     h2: {
-      mt: '1.8rem',
-      lineHeight: 1.3,
+      mt: '1.5rem',
+      lineHeight: 1.1,
       fontWeight: 'semibold',
-      fontSize: '1.8rem',
+      fontSize: '1.5rem',
     },
     h3: {
       mt: '1.8rem',
       lineHeight: 1.25,
       fontWeight: 'semibold',
-      fontSize: '1.25rem',
+      fontSize: '1.2rem',
       letterSpacing: '-.025em',
     },
     h4: {
@@ -93,6 +93,10 @@ const customTheme = extendTheme({
       lineHeight: 1.7,
       'blockquote &': {
         mt: 0,
+      },
+      // imgはpタグとセットで追加されるためmt調整
+      '> img': {
+        mt: '1rem',
       },
     },
     hr: {
