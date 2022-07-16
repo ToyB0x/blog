@@ -31,5 +31,8 @@
     "next-transpile-modules": "9.0.0",
     "remark-gfm": "3.0.1",
     "tsconfig": "*"
+  },
+  "volta": {
+    "node": "16.16.0"
   }
 }

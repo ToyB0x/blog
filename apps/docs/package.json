@@ -18,5 +18,8 @@
     "config": "*",
     "next-transpile-modules": "9.0.0",
     "tsconfig": "*"
+  },
+  "volta": {
+    "node": "16.16.0"
   }
 }
