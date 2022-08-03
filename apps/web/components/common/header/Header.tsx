@@ -33,12 +33,6 @@ export const Header = (props: HTMLChakraProps<'header'>) => {
       <Container>
         <HStack h={16}>
           <HStack h={16}>
-            <Avatar
-              src="/avatar/avatar.png"
-              bg="transparent"
-              size="md"
-              mt={1}
-            />
             <Text fontSize="4xl" fontWeight="semibold" letterSpacing={2}>
               <Link href="/">
                 <a>
@@ -47,6 +41,12 @@ export const Header = (props: HTMLChakraProps<'header'>) => {
                     0
                   </Text>
                   x
+                  <Avatar
+                    src="/avatar/avatar.png"
+                    bg="transparent"
+                    size="md"
+                    mt={1}
+                  />
                 </a>
               </Link>
             </Text>
