@@ -24,7 +24,7 @@ export const Index: FC<Props> = ({ posts }) => (
       <title>記事一覧</title>
     </Head>
 
-    <Stack spacing={8} mt={12}>
+    <Stack spacing={8} mt={14}>
       {posts.map((post, idx) => (
         <PostItem key={idx} {...post} />
       ))}
