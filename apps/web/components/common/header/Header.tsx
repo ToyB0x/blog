@@ -42,10 +42,11 @@ export const Header = (props: HTMLChakraProps<'header'>) => {
                   </Text>
                   x
                   <Avatar
-                    src="/avatar/avatar.png"
-                    bg="transparent"
-                    size="md"
                     mt={1}
+                    size="md"
+                    borderRadius={0}
+                    bg="transparent"
+                    src="/avatar/avatar.png"
                   />
                 </a>
               </Link>
