@@ -51,10 +51,11 @@ const Post = (props: Props) => (
           </Center>
           <Center mb={8}>
             <Avatar
-              src="/avatar/avatar.png"
-              bg="transparent"
-              size="lg"
               mt={1}
+              size="lg"
+              bg="transparent"
+              borderRadius={0}
+              src="/avatar/avatar.png"
             />
           </Center>
         </a>
