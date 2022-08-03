@@ -31,7 +31,7 @@ export const Header = (props: HTMLChakraProps<'header'>) => {
       {...props}
     >
       <Container>
-        <HStack h={16}>
+        <HStack h={16} mt={2}>
           <HStack h={16}>
             <Text fontSize="4xl" fontWeight="semibold" letterSpacing={2}>
               <Link href="/">
