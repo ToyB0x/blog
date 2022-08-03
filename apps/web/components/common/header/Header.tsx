@@ -1,4 +1,5 @@
 import {
+  Avatar,
   chakra,
   Container,
   HStack,
@@ -30,20 +31,28 @@ export const Header = (props: HTMLChakraProps<'header'>) => {
       {...props}
     >
       <Container>
-        <HStack h={16}>
-          <Text fontSize="xl" fontWeight="semibold" letterSpacing={2}>
-            <Link href="/">
-              <a>
-                ToyB
-                <Text as="span" color="blue.400">
-                  0
-                </Text>
-                x
-              </a>
-            </Link>
-          </Text>
+        <HStack h={16} mt={1}>
+          <HStack h={16}>
+            <Text fontSize="4xl" fontWeight="semibold" letterSpacing={2}>
+              <Link href="/">
+                <a>
+                  ToyB
+                  <Text as="span" color="blue.400">
+                    0
+                  </Text>
+                  x
+                  <Avatar
+                    src="/avatar/avatar.png"
+                    bg="transparent"
+                    size="md"
+                    mt={1}
+                  />
+                </a>
+              </Link>
+            </Text>
+          </HStack>
           <Spacer />
-          <HStack fontSize="2xl" spacing={4}>
+          <HStack fontSize="3xl" spacing={4}>
             <NeonLinkIcon href="https://twitter.com/ToyB0x_" icon={FiTwitter} />
             <NeonLinkIcon
               href="https://www.instagram.com/toyb0x_/"

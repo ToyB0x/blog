@@ -1,8 +1,9 @@
 import { allPosts, Post } from 'contentlayer/generated'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { BlogLayout } from '../../components/layout'
 import { PostLayout } from '../../components/layout'
 import Head from 'next/head'
+import { Avatar, Center, Container, Text } from '@chakra-ui/react'
+import Link from 'next/link'
 
 type Props = {
   post: Post
@@ -35,9 +36,32 @@ const Post = (props: Props) => (
       <meta property="og:url" content={props.post.url} />
     </Head>
 
-    <BlogLayout>
+    <Container>
+      {/* Avatar */}
+      <Link href="/">
+        <a>
+          <Center mt={6}>
+            <Text fontSize="xl" fontWeight="semibold" letterSpacing={1}>
+              ToyB
+              <Text as="span" color="blue.400">
+                0
+              </Text>
+              x
+            </Text>
+          </Center>
+          <Center mb={8}>
+            <Avatar
+              src="/avatar/avatar.png"
+              bg="transparent"
+              size="lg"
+              mt={1}
+            />
+          </Center>
+        </a>
+      </Link>
+
       <PostLayout post={props.post} />
-    </BlogLayout>
+    </Container>
   </>
 )
 
