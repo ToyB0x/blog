@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
-import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools'
+import { mode, GlobalStyleProps } from '@chakra-ui/theme-tools'
 
 const customTheme = extendTheme({
   components: {
@@ -14,7 +14,7 @@ const customTheme = extendTheme({
     body: 'Inter, sans-serif',
   },
   styles: {
-    global: (props: StyleFunctionProps) => ({
+    global: (props: GlobalStyleProps) => ({
       body: {
         color: mode('gray.700', 'whiteAlpha.900')(props),
         '.deleted': {
