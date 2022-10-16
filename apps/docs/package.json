@@ -16,10 +16,10 @@
   },
   "devDependencies": {
     "config": "*",
-    "next-transpile-modules": "9.0.0",
+    "next-transpile-modules": "9.1.0",
     "tsconfig": "*"
   },
   "volta": {
-    "node": "16.17.1"
+    "node": "16.18.0"
   }
 }
