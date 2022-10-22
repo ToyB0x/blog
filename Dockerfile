@@ -1,4 +1,4 @@
-FROM node:16 as build
+FROM node:19 as build
 
 WORKDIR /opt/turborepo
 
@@ -20,7 +20,7 @@ RUN yarn install --frozen-lockfile
 RUN yarn turbo run build --scope="api"
 
 
-FROM node:16
+FROM node:19
 WORKDIR /opt/turborepo
 
 # APIサーバのビルド結果とnode_modulesをコピー
