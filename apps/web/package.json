@@ -28,7 +28,7 @@
     "@mdx-js/react": "2.1.5",
     "config": "*",
     "contentlayer": "0.2.9",
-    "next-contentlayer": "0.2.9",
+    "next-contentlayer": "0.2.8",
     "next-transpile-modules": "10.0.0",
     "remark-gfm": "3.0.1",
     "tsconfig": "*"
