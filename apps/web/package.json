@@ -29,7 +29,7 @@
     "config": "*",
     "contentlayer": "0.2.8",
     "next-contentlayer": "0.2.8",
-    "next-transpile-modules": "9.1.0",
+    "next-transpile-modules": "10.0.0",
     "remark-gfm": "3.0.1",
     "tsconfig": "*"
   },
