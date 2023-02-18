@@ -10,7 +10,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clear": "rm -rf ./node_modules ./apps/*/node_modules ./packages/*/node_modules",
+    "refresh": "yarn clear && yarn"
   },
   "devDependencies": {
     "@nestjs/cli": "9.2.0",
@@ -30,6 +32,7 @@
   },
   "packageManager": "yarn@1.22.19",
   "volta": {
-    "node": "18.14.1"
+    "node": "18.14.1",
+    "yarn": "1.22.19"
   }
 }

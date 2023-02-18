@@ -34,6 +34,6 @@
     "tsconfig": "*"
   },
   "volta": {
-    "node": "18.14.1"
+    "extends": "../../package.json"
   }
 }
