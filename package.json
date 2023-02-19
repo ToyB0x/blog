@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "@toyb0x-blog/monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -10,7 +10,10 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "typecheck": "turbo run typecheck",
+    "clear": "rm -rf ./node_modules ./apps/*/node_modules ./packages/*/node_modules",
+    "refresh": "yarn clear && yarn"
   },
   "devDependencies": {
     "@nestjs/cli": "9.2.0",
@@ -25,11 +28,11 @@
     "typescript": "4.9.5"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "packageManager": "yarn@1.22.19",
   "volta": {
-    "node": "18.14.1"
+    "node": "18.14.1",
+    "yarn": "1.22.19"
   }
 }

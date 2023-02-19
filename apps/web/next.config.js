@@ -1,4 +1,4 @@
-const withTM = require('next-transpile-modules')(['ui', '@mdx-lib/chakra'])
+const withTM = require('next-transpile-modules')(['ui', 'mdx-lib'])
 const { withContentlayer } = require('next-contentlayer')
 
 module.exports = withContentlayer(

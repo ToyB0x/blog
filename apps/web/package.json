@@ -6,13 +6,13 @@
     "dev": "INIT_CWD=$PWD next dev",
     "build": "INIT_CWD=$PWD next build",
     "start": "INIT_CWD=$PWD next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/react": "2.5.1",
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
-    "@mdx-lib/chakra": "0.0.2-alpha.4",
     "date-fns": "2.29.3",
     "framer-motion": "9.0.4",
     "next": "13.1.6",
@@ -22,7 +22,8 @@
     "react-icons": "4.7.1",
     "react-player": "2.11.2",
     "tocbot": "4.20.1",
-    "ui": "*"
+    "ui": "*",
+    "mdx-lib": "*"
   },
   "devDependencies": {
     "@mdx-js/react": "2.3.0",
@@ -34,6 +35,6 @@
     "tsconfig": "*"
   },
   "volta": {
-    "node": "18.14.1"
+    "extends": "../../package.json"
   }
 }

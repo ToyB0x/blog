@@ -7,9 +7,7 @@ export const PostItem = (post: Post) => (
   <Stack>
     <Flex>
       <Heading as="h1" size="md" w="74%" noOfLines={1}>
-        <Link href={post.url}>
-          <a>{post.title}</a>
-        </Link>
+        <Link href={post.url}>{post.title}</Link>
       </Heading>
 
       <Box

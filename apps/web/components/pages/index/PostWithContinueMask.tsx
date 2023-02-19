@@ -8,10 +8,8 @@ export const PostWithContinueMask = (post: Post) => (
   <>
     <Box pos="relative" maxH="80vh" overflow="hidden">
       <Link href={post.url}>
-        <a>
-          <PostLayout post={post} />
-          <ContinueMask />
-        </a>
+        <PostLayout post={post} />
+        <ContinueMask />
       </Link>
     </Box>
     <Divider />

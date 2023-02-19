@@ -39,26 +39,24 @@ const Post = (props: Props) => (
     <Container>
       {/* Avatar */}
       <Link href="/">
-        <a>
-          <Center mt={6}>
-            <Text fontSize="xl" fontWeight="semibold" letterSpacing={1}>
-              ToyB
-              <Text as="span" color="blue.400">
-                0
-              </Text>
-              x
+        <Center mt={6}>
+          <Text fontSize="xl" fontWeight="semibold" letterSpacing={1}>
+            ToyB
+            <Text as="span" color="blue.400">
+              0
             </Text>
-          </Center>
-          <Center mb={8}>
-            <Avatar
-              mt={1}
-              size="lg"
-              bg="transparent"
-              borderRadius={0}
-              src="/avatar/avatar.png"
-            />
-          </Center>
-        </a>
+            x
+          </Text>
+        </Center>
+        <Center mb={8}>
+          <Avatar
+            mt={1}
+            size="lg"
+            bg="transparent"
+            borderRadius={0}
+            src="/avatar/avatar.png"
+          />
+        </Center>
       </Link>
 
       <PostLayout post={props.post} />
