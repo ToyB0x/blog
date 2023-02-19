@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "@toyb0x-blog/monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -11,6 +11,7 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "typecheck": "turbo run typecheck",
     "clear": "rm -rf ./node_modules ./apps/*/node_modules ./packages/*/node_modules",
     "refresh": "yarn clear && yarn"
   },
