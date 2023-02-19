@@ -1,7 +1,7 @@
 import { Box, Heading, Stack } from '@chakra-ui/react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { format, parseISO } from 'date-fns'
-import { MDXComponents } from '@mdx-lib/chakra'
+import { MDXComponents } from 'mdx-lib'
 import { Post } from 'contentlayer/generated'
 import { FC } from 'react'
 

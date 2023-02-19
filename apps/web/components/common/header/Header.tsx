@@ -35,20 +35,18 @@ export const Header = (props: HTMLChakraProps<'header'>) => {
           <HStack h={16}>
             <Text fontSize="4xl" fontWeight="semibold" letterSpacing={2}>
               <Link href="/">
-                <a>
-                  ToyB
-                  <Text as="span" color="blue.400">
-                    0
-                  </Text>
-                  x
-                  <Avatar
-                    mt={1}
-                    size="md"
-                    borderRadius={0}
-                    bg="transparent"
-                    src="/avatar/avatar.png"
-                  />
-                </a>
+                ToyB
+                <Text as="span" color="blue.400">
+                  0
+                </Text>
+                x
+                <Avatar
+                  mt={1}
+                  size="md"
+                  borderRadius={0}
+                  bg="transparent"
+                  src="/avatar/avatar.png"
+                />
               </Link>
             </Text>
           </HStack>
