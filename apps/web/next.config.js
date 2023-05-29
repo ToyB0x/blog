@@ -6,5 +6,6 @@ module.exports = withContentlayer(
     experimental: { esmExternals: 'loose' },
     pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
     reactStrictMode: true,
+    swcMinify: true,
   })
 )

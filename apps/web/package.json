@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "INIT_CWD=$PWD next dev",
-    "build": "INIT_CWD=$PWD next build",
+    "build": "INIT_CWD=$PWD contentlayer build && next build",
     "start": "INIT_CWD=$PWD next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
