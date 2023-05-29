@@ -16,14 +16,14 @@
     "refresh": "yarn clear && yarn"
   },
   "devDependencies": {
-    "@nestjs/cli": "9.2.0",
+    "@nestjs/cli": "9.5.0",
     "@testing-library/react": "14.0.0",
-    "@types/jest": "29.4.0",
-    "@types/node": "18.14.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.34.0",
-    "prettier": "2.8.4",
+    "@types/jest": "29.5.1",
+    "@types/node": "18.16.16",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.41.0",
+    "prettier": "2.8.8",
     "turbo": "latest",
     "typescript": "4.9.5"
   },
@@ -32,7 +32,7 @@
   },
   "packageManager": "yarn@1.22.19",
   "volta": {
-    "node": "18.14.1",
+    "node": "18.16.0",
     "yarn": "1.22.19"
   }
 }
