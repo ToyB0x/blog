@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@chakra-ui/react": "2.6.1",
+    "@chakra-ui/react": "2.7.0",
     "@emotion/react": "11.11.0",
     "@emotion/styled": "11.11.0",
     "date-fns": "2.30.0",
@@ -28,8 +28,8 @@
   "devDependencies": {
     "@mdx-js/react": "2.3.0",
     "config": "*",
-    "contentlayer": "0.3.2",
-    "next-contentlayer": "0.3.2",
+    "contentlayer": "0.3.3",
+    "next-contentlayer": "0.3.3",
     "next-transpile-modules": "10.0.0",
     "remark-gfm": "3.0.1",
     "tsconfig": "*"
