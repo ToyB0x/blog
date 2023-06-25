@@ -16,7 +16,7 @@
     "refresh": "yarn clear && yarn"
   },
   "devDependencies": {
-    "@nestjs/cli": "9.5.0",
+    "@nestjs/cli": "10.0.3",
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.2",
     "@types/node": "18.16.18",
