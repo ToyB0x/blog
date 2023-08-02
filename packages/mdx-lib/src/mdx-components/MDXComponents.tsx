@@ -52,8 +52,9 @@ export const MDXComponents = {
       as="blockquote"
       rounded="4px"
       my="1.5rem"
-      {...props}
-    />
+    >
+      {props.children}
+    </Alert>
   ),
   VideoPlayer,
   AspectRatio,
