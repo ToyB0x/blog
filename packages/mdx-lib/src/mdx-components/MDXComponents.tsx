@@ -43,7 +43,7 @@ export const MDXComponents = {
   ul: (props: HTMLChakraProps<'ul'>) => <chakra.ul apply="mdx.ul" {...props} />,
   ol: (props: HTMLChakraProps<'ol'>) => <chakra.ol apply="mdx.ul" {...props} />,
   li: (props: HTMLChakraProps<'li'>) => <chakra.li pb="4px" {...props} />,
-  blockquote: () => (
+  blockquote: (props: HTMLChakraProps<'blockquote'>) => (
     <Alert
       mt="4"
       role="none"
@@ -52,6 +52,7 @@ export const MDXComponents = {
       as="blockquote"
       rounded="4px"
       my="1.5rem"
+      {...props}
     />
   ),
   VideoPlayer,
