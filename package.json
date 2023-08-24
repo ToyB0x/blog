@@ -16,14 +16,14 @@
     "refresh": "yarn clear && yarn"
   },
   "devDependencies": {
-    "@nestjs/cli": "10.1.11",
+    "@nestjs/cli": "10.1.14",
     "@testing-library/react": "14.0.0",
-    "@types/jest": "29.5.3",
-    "@types/node": "18.17.5",
-    "@types/react": "18.2.20",
+    "@types/jest": "29.5.4",
+    "@types/node": "18.17.9",
+    "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "eslint": "8.47.0",
-    "prettier": "3.0.1",
+    "prettier": "3.0.2",
     "turbo": "latest",
     "typescript": "5.1.6"
   },
