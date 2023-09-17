@@ -16,16 +16,16 @@
     "refresh": "yarn clear && yarn"
   },
   "devDependencies": {
-    "@nestjs/cli": "10.1.14",
+    "@nestjs/cli": "10.1.17",
     "@testing-library/react": "14.0.0",
-    "@types/jest": "29.5.4",
-    "@types/node": "18.17.9",
+    "@types/jest": "29.5.5",
+    "@types/node": "18.17.17",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "eslint": "8.47.0",
-    "prettier": "3.0.2",
+    "eslint": "8.49.0",
+    "prettier": "3.0.3",
     "turbo": "latest",
-    "typescript": "5.1.6"
+    "typescript": "5.2.2"
   },
   "engines": {
     "node": ">=18.0.0"
