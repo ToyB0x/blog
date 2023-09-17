@@ -1,5 +1,11 @@
 {
   "schedule": "every weekend",
   "extends": ["config:base", "group:allNonMajor", ":semanticCommits"],
-  "reviewers": ["ToyB0x"]
+  "reviewers": ["ToyB0x"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin"],
+      "automerge": true
+    }
+  ]
 }
