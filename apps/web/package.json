@@ -15,6 +15,7 @@
     "@emotion/styled": "11.11.0",
     "date-fns": "2.30.0",
     "framer-motion": "10.16.4",
+    "mdx-lib": "*",
     "next": "13.5.6",
     "prism-react-renderer": "2.1.0",
     "react": "18.2.0",
@@ -22,15 +23,13 @@
     "react-icons": "4.11.0",
     "react-player": "2.13.0",
     "tocbot": "4.21.2",
-    "ui": "*",
-    "mdx-lib": "*"
+    "ui": "*"
   },
   "devDependencies": {
     "@mdx-js/react": "2.3.0",
     "config": "*",
     "contentlayer": "0.3.4",
     "next-contentlayer": "0.3.4",
-    "next-transpile-modules": "10.0.1",
     "remark-gfm": "3.0.1",
     "tsconfig": "*"
   },
