@@ -1,3 +1,6 @@
+'use client'
+import 'client-only'
+
 import { Container } from '@chakra-ui/react'
 import { FC } from 'react'
 import { Header } from '../common'

@@ -1,3 +1,6 @@
+'use client'
+import 'client-only'
+
 import { Post } from 'contentlayer/generated'
 import { Box, Flex, Heading, Stack } from '@chakra-ui/react'
 import Link from 'next/link'
