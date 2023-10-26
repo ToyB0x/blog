@@ -7,7 +7,7 @@ import { PostLayout } from '../../layout'
 export const PostWithContinueMask = (post: Post) => (
   <>
     <Box pos="relative" maxH="80vh" overflow="hidden">
-      <Link href={post.url}>
+      <Link href={post.fullPath}>
         <PostLayout post={post} />
         <ContinueMask />
       </Link>

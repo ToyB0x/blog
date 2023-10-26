@@ -5,6 +5,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'ToyB0xのBlog',
+  icons: '/favicons/favicon.ico',
 }
 
 export default async function RootLayout({
@@ -14,10 +15,6 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head>
-        <link rel="icon" href="/favicons/favicon.ico" />
-        <title>ToyB0xのBlog</title>
-      </head>
       <body>
         <Providers>{children}</Providers>
       </body>

@@ -28,10 +28,12 @@
   },
   "devDependencies": {
     "@mdx-js/react": "2.3.0",
+    "client-only": "0.0.1",
     "config": "*",
     "contentlayer": "0.3.4",
     "next-contentlayer": "0.3.4",
     "remark-gfm": "3.0.1",
+    "server-only": "0.0.1",
     "tsconfig": "*"
   },
   "volta": {
