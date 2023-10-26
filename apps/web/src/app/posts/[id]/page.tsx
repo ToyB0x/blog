@@ -17,7 +17,6 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = params.id
   const post = allPosts.find((post) => post._raw.flattenedPath === params.id)
   if (!post) throw Error('no slug route found')
 
@@ -33,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page({ params }: Props) {
   console.warn({ params })
   // const post = allPosts.find((post) => post._raw.flattenedPath === params.id)
   const post = allPosts.find((post) => post._raw.flattenedPath === params.id)
