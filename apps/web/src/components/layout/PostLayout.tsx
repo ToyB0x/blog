@@ -1,3 +1,6 @@
+'use client'
+import 'client-only'
+
 import { Box, Heading, Stack } from '@chakra-ui/react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { format, parseISO } from 'date-fns'
