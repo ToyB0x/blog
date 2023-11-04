@@ -23,7 +23,7 @@
     "react-dom": "18.2.0",
     "react-icons": "4.11.0",
     "react-player": "2.13.0",
-    "tocbot": "4.21.3",
+    "tocbot": "4.21.6",
     "ui": "*"
   },
   "devDependencies": {
