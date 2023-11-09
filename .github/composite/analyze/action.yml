@@ -59,10 +59,11 @@ runs:
       id: fc
       with:
         issue-number: ${{ inputs.github-event-number }}
-        body-includes: '<!-- __NEXTJS_BUNDLE_${{ inputs.package-name }} -->'
+        body-includes: '<!-- __NEXTJS_BUNDLE_@blog/web -->'
 
     - name: Create Comment
       uses: peter-evans/create-or-update-comment@v3
+      if: ${{ (inputs.github-event-number != 0) && steps.fc.outputs.comment-id == 0 }}
       with:
         issue-number: ${{ inputs.github-event-number }}
         body: ${{ steps.get-comment-body.outputs.body }}
