@@ -31,5 +31,8 @@
     "next-contentlayer": "^0.3.2",
     "postcss": "8.4.23",
     "typescript": "5.0.4"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }
