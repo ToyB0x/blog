@@ -26,7 +26,7 @@ runs:
       uses: actions/upload-artifact@v3
       with:
         name: bundle
-        path: ${{ inputs.working-directory }}/.next/analyze/__bundle_analysis.json
+        path: ${{ inputs.working-directory }}.next/analyze/__bundle_analysis.json
 
     - name: Download base branch bundle stats
       uses: dawidd6/action-download-artifact@v2
@@ -34,7 +34,7 @@ runs:
       with:
         workflow: monorepo-test.yml
         branch: ${{ inputs.github-event-pull_request-base-ref }}
-        path: ${{ inputs.working-directory }}/.next/analyze/base
+        path: ${{ inputs.working-directory }}.next/analyze/base
 
     - name: Compare with base branch bundle
       if: ${{ inputs.github-event-number != 0 }}
@@ -59,7 +59,8 @@ runs:
       id: fc
       with:
         issue-number: ${{ inputs.github-event-number }}
-        body-includes: "<!-- __NEXTJS_BUNDLE_${{ inputs.package-name }} -->"
+        body-includes: '<!-- __NEXTJS_BUNDLE_@blog/web -->'
+      # body-includes: "<!-- __NEXTJS_BUNDLE_${{ inputs.package-name }} -->"
 
     - name: Create Comment
       uses: peter-evans/create-or-update-comment@v3
