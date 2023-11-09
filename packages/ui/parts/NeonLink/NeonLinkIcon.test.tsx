@@ -5,7 +5,7 @@ import { NeonLinkIcon } from './NeonLinkIcon'
 describe('LinkIcon', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <NeonLinkIcon href="https://github.com" icon={FiGithub} />
+      <NeonLinkIcon href="https://github.com" icon={FiGithub} />,
     )
     expect(baseElement).toBeTruthy()
   })

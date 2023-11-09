@@ -16,7 +16,7 @@ const calculateLinesToHighlight = (meta: string) => {
   return (index: number) => {
     const lineNumber = index + 1
     const inRange = lineNumbers.some(([start, end]) =>
-      end ? lineNumber >= start && lineNumber <= end : lineNumber === start
+      end ? lineNumber >= start && lineNumber <= end : lineNumber === start,
     )
     return inRange
   }

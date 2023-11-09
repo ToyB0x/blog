@@ -10,15 +10,15 @@ function CopyButton({ code, ...props }: CopyButtonProps) {
 
   return (
     <Button
-      size='sm'
-      position='absolute'
-      textTransform='uppercase'
-      colorScheme='teal'
-      fontSize='xs'
-      height='24px'
+      size="sm"
+      position="absolute"
+      textTransform="uppercase"
+      colorScheme="teal"
+      fontSize="xs"
+      height="24px"
       top={0}
-      zIndex='1'
-      right='1.25em'
+      zIndex="1"
+      right="1.25em"
       {...props}
       onClick={onCopy}
     >
