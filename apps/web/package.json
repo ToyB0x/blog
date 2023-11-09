@@ -27,7 +27,7 @@
     "ui": "*"
   },
   "devDependencies": {
-    "@mdx-js/react": "2.3.0",
+    "@mdx-js/react": "3.0.0",
     "client-only": "0.0.1",
     "config": "*",
     "contentlayer": "0.3.4",
