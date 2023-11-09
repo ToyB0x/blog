@@ -59,7 +59,7 @@ runs:
       id: fc
       with:
         issue-number: ${{ inputs.github-event-number }}
-        body-includes: '<!-- __NEXTJS_BUNDLE_@blog/web -->'
+        body-includes: "<!-- __NEXTJS_BUNDLE_${{ inputs.package-name }} -->"
 
     - name: Create Comment
       uses: peter-evans/create-or-update-comment@v3
