@@ -31,8 +31,6 @@
     "client-only": "0.0.1",
     "config": "*",
     "contentlayer": "0.3.4",
-    "gzip-size": "6.0.0",
-    "mkdirp": "3.0.1",
     "next-contentlayer": "0.3.4",
     "remark-gfm": "3.0.1",
     "server-only": "0.0.1",
