@@ -1,0 +1,56 @@
+name: Monorepo test
+on: push
+env:
+  CACHE_VERSION: 1
+permissions:
+  contents: read # for checkout repository
+  actions: read # for fetching base branch bundle stats
+  pull-requests: write # for comments
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: node setup (via volta)
+        uses: volta-cli/action@v4
+
+      - name: Restore Node cache
+        uses: actions/setup-node@v4
+        with:
+          cache: 'yarn'
+          node-version-file: 'package.json'
+
+      - name: Install all packages
+        run: yarn install --immutable --mode=skip-build
+
+      - name: Turborepo Cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules/.cache/turbo
+          key:
+            turbo/${{ env.CACHE_VERSION }}/${{ github.job }}/${{ github.ref_name }}/${{ github.sha }}
+          restore-keys: |
+            turbo/${{ env.CACHE_VERSION }}/${{ github.job }}/${{ github.ref_name }}/
+            turbo/${{ env.CACHE_VERSION }}/${{ github.job }}/
+
+      - name: Format check
+        run: yarn format:check
+
+      - name: Lint check
+        run: yarn lint
+
+      - name: Build check
+        run: yarn build
+
+      - name: Type check
+        run: yarn typecheck
+
+      - name: Bundle analysis
+        uses: ./.github/composite/analyze
+        with:
+          package-name: @blog/web
+          working-directory: ./apps/web/
+          github-event-number: ${{ github.event.number }}
+          github-event-pull_request-base-ref: ${{ github.event.pull_request.base.ref }}
