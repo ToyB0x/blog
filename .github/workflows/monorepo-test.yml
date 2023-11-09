@@ -46,11 +46,3 @@ jobs:
 
       - name: Type check
         run: yarn typecheck
-
-      - name: Bundle analysis
-        uses: ./.github/composite/analyze
-        with:
-          package-name: '@blog/web'
-          working-directory: './apps/web/'
-          github-event-number: ${{ github.event.number }}
-          github-event-pull_request-base-ref: ${{ github.event.pull_request.base.ref }}
