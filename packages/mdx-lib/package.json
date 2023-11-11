@@ -16,7 +16,7 @@
     "react-player": "^2.11.2"
   },
   "devDependencies": {
-    "@chakra-ui/react": "2.8.1",
+    "@chakra-ui/react": "2.8.2",
     "@mdx-js/react": "3.0.0",
     "config": "*",
     "tsconfig": "*",
