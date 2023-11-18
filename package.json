@@ -18,22 +18,22 @@
   },
   "devDependencies": {
     "@nestjs/cli": "10.2.1",
-    "@testing-library/react": "14.1.0",
+    "@testing-library/react": "14.1.2",
     "@types/jest": "29.5.8",
     "@types/node": "18.18.9",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
-    "eslint": "8.53.0",
-    "prettier": "3.0.3",
+    "eslint": "8.54.0",
+    "prettier": "3.1.0",
     "turbo": "latest",
     "typescript": "5.2.2"
   },
   "engines": {
     "node": ">=18.0.0"
   },
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@1.22.21",
   "volta": {
     "node": "18.18.2",
-    "yarn": "1.22.19"
+    "yarn": "1.22.21"
   }
 }
