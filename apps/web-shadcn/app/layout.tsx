@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -31,13 +32,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <div className="text-3xl font-medium">
                   <Link href="/">
                     ToyB
-                    <span className="text-blue-300">0</span>x{/*<Image*/}
-                    {/*  src="/avatar/avatar.png"*/}
-                    {/*  width={38}*/}
-                    {/*  height={38}*/}
-                    {/*  alt="Picture of the author"*/}
-                    {/*  className="inline"*/}
-                    {/*/>*/}
+                    <span className="text-blue-300">0</span>x
+                    <Image
+                      src="/avatar/avatar.png"
+                      width={36}
+                      height={36}
+                      alt="Picture of the author"
+                      className="inline mb-1"
+                    />
                   </Link>
                 </div>
 
