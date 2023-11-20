@@ -20,7 +20,7 @@
     "@mdx-js/react": "3.0.0",
     "config": "*",
     "tsconfig": "*",
-    "tsup": "^7.0.0"
+    "tsup": "^8.0.0"
   },
   "volta": {
     "extends": "../../package.json"
