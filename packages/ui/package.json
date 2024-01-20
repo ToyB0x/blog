@@ -10,7 +10,7 @@
     "tsconfig": "*"
   },
   "dependencies": {
-    "webfontloader": "^1.6.28"
+    "webfontloader": "1.6.28"
   },
   "volta": {
     "extends": "../../package.json"

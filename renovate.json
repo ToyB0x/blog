@@ -6,6 +6,11 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["node"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin"],
+      "enabled": false
     }
   ],
   "rangeStrategy": "pin"
