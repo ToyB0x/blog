@@ -43,7 +43,7 @@ export async function generateStaticParams(): Promise<PageProps['params'][]> {
 }
 
 // ref: https://github.com/shadcn/next-contentlayer/blob/5b32397c2034a97a077cd695f3421a2e76af05c5/app/%5B...slug%5D/page.tsx
-export default async function PagePage({ params }: PageProps) {
+export default async function Page({ params }: PageProps) {
   const page = await getPageFromParams(params)
 
   if (!page) {
