@@ -1,10 +1,9 @@
-const { withContentlayer } = require('next-contentlayer')
+const { withContentlayer } = require("next-contentlayer");
 
-module.exports = withContentlayer({
-  output: 'export',
-  transpilePackages: ['ui', 'mdx-lib'],
-  experimental: { esmExternals: 'loose' },
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-})
+};
+
+module.exports = withContentlayer(nextConfig);

@@ -1,40 +1,36 @@
 {
-  "name": "@blog/web",
-  "version": "0.0.0",
+  "name": "web",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "INIT_CWD=$PWD next dev",
-    "build": "INIT_CWD=$PWD contentlayer build && next build",
-    "start": "INIT_CWD=$PWD next start",
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next build && next start",
+    "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@chakra-ui/next-js": "2.2.0",
-    "@chakra-ui/react": "2.8.2",
-    "@emotion/react": "11.11.1",
-    "@emotion/styled": "11.11.0",
-    "date-fns": "2.30.0",
-    "framer-motion": "10.16.5",
-    "mdx-lib": "*",
+    "@tailwindcss/typography": "^0.5.9",
+    "@vercel/analytics": "^1.0.0",
+    "date-fns": "^2.30.0",
     "next": "14.0.3",
-    "prism-react-renderer": "2.2.0",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "5.0.1",
-    "react-player": "2.13.0",
-    "tocbot": "4.22.0",
-    "ui": "*"
+    "tailwindcss": "3.3.5"
   },
   "devDependencies": {
-    "@mdx-js/react": "3.0.0",
-    "client-only": "0.0.1",
-    "config": "*",
-    "contentlayer": "0.3.4",
-    "next-contentlayer": "0.3.4",
-    "remark-gfm": "3.0.1",
-    "server-only": "0.0.1",
-    "tsconfig": "*"
+    "@types/node": "20.9.2",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "autoprefixer": "10.4.16",
+    "contentlayer": "^0.3.2",
+    "eslint": "8.54.0",
+    "eslint-config-next": "14.0.3",
+    "next-contentlayer": "^0.3.2",
+    "postcss": "8.4.31",
+    "typescript": "5.2.2"
   },
   "volta": {
     "extends": "../../package.json"
