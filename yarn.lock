@@ -1324,7 +1324,7 @@ __metadata:
     "@testing-library/react": "npm:14.3.1"
     "@types/jest": "npm:29.5.12"
     "@types/node": "npm:20.12.12"
-    "@types/react": "npm:18.3.2"
+    "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     eslint: "npm:8.57.0"
     prettier: "npm:3.2.5"
@@ -1536,13 +1536,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.3.2":
-  version: 18.3.2
-  resolution: "@types/react@npm:18.3.2"
+"@types/react@npm:18.3.3":
+  version: 18.3.3
+  resolution: "@types/react@npm:18.3.3"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/9fb2f1fcf7e889ee4ea7c3c5978df595c66e770e5fd3a245dbdd2589b9b911524c11dab25a6275d8af4e336e4cb5fa850d447884b84c335a187a338c89df99ba
+  checksum: 10c0/fe455f805c5da13b89964c3d68060cebd43e73ec15001a68b34634604a78140e6fc202f3f61679b9d809dde6d7a7c2cb3ed51e0fd1462557911db09879b55114
   languageName: node
   linkType: hard
 
@@ -1668,9 +1668,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/analytics@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@vercel/analytics@npm:1.2.2"
+"@vercel/analytics@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@vercel/analytics@npm:1.3.1"
   dependencies:
     server-only: "npm:^0.0.1"
   peerDependencies:
@@ -1681,7 +1681,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 10c0/82c89846356b370574414aa511d5a341535dcc7ba3b0a5eabfc7644df6d52a7b30253247627382faf4a0cc4192715cea718fe91027f7ba35efba80256064a005
+  checksum: 10c0/a8c3d363a3327a4bb6b555374eecc814fc6840870c757ea96227111692a219916b960081424d46b8d5f5d84bcd40b8078bc882b774ab4dfd8e77f67d61b38ab1
   languageName: node
   linkType: hard
 
@@ -9028,9 +9028,9 @@ __metadata:
   dependencies:
     "@tailwindcss/typography": "npm:0.5.13"
     "@types/node": "npm:20.12.12"
-    "@types/react": "npm:18.3.2"
+    "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@vercel/analytics": "npm:1.2.2"
+    "@vercel/analytics": "npm:1.3.1"
     autoprefixer: "npm:10.4.19"
     contentlayer: "npm:0.3.4"
     date-fns: "npm:3.6.0"
