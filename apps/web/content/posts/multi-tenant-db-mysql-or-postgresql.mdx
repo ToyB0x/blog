@@ -5,6 +5,7 @@ date: 2022-6-12
 ---
 
 # TL;DR
+
 - PostgreSQLにはRow Level Security（RLS）機能があるよ！
 - マルチテナント的なサービスでFail Safeな設計を実現できるよ！
 - 「クエリ間違えた」-->「センシティブな企業情報が誰でも閲覧可能」みたいな事を防げるよ！
@@ -20,6 +21,7 @@ date: 2022-6-12
 例: クラウド人事労務サービスのSmartHRさん等
 
 ## シングルテナントの例
+
 もう少ししっかり理解するために、マルチテナントでは無いサービスを考えてみましょう。
 例えばECサイトのAmazon等はどうでしょうか？(Amazonは法人向けサービスも提供しているようですが、ここでは簡略化してC向けサービスとします)
 
@@ -28,6 +30,7 @@ AmazonのサインアップフローはEメールとパスワードさえあれ�
 ざっくりいうとこれはマルチテナントでは「ない」サービスです。
 
 ### マルチテナントの例
+
 上記と比較して、クラウド人事労務サービスのSmartHRさんについて考えてみましょう
 SmartHRさんは「人事労務サービス」と銘打ったSaasなため、当然「組織」を前提としています。
 
@@ -38,6 +41,7 @@ SmartHRさんは「人事労務サービス」と銘打ったSaasなため、当
 # 本題: マルチテナントサービスのDB選定(MySQLかPostgreSQLか？)
 
 ## DBコネクションのコスト
+
 本題に入ります。マルチテナントサービスのDBとしてMySQLかPostgreSQLのどちらが適しているでしょうか？
 おおざっぱに言ってMySQLはマルチスレッド型で軽量なRDBかと思います。
 一方でPostgreSQLはマルチプロセス型で機能が豊富なRDB(ORDBMS)と理解して良いかと思います。
@@ -72,6 +76,7 @@ USING ("tenant_id" = current_setting('tenant.id'));
 
 RLSを使用しない場合自前のコードだけで他のテナントへのアクセスを防止する必要があります。
 例えばテーブルのマイグレーションに関わるPRが数年で100回発生した場合に100回全て、
+
 - アプリケーション側のクエリが完璧である
 - 上記で実装ミスしていたとしてもPRのレビューで防止できる
 
@@ -81,24 +86,43 @@ RLSを使用しない場合自前のコードだけで他のテナントへの�
 
 というわけで、マルチテナント対応なアプリの場合はRow Level Security（RLS）機能のあるPostgreSQLを選ぶのが無難かなぁというお話でした。
 
-## 補足: Row Level Security（RLS）とコネクション
+## Row Level Security（RLS）の適用スコープ
 
-さてこのRLSですが以下の2つの値を比較した結果がTRUE / FALSEのどちらになるかが重要です
-- connectionの設定(set_configで指定)
+さてこのRLSですが以下の2つの値を比較した結果がTRUE / FALSEのどちらになるかが重要です。
+
+- 構成設定関数(set_config等)で設定された値
   - 上記例ではcurrent_setting('tenant.id')
 - レコード内の特定のカラムの値
   - 上記例ではtenant_id
 
-つまり、PostgreSQLをコネクションプーリングと共に運用している場合、
-別テナントのユーザからのリクエストにも関わらず古いコネクションを再利用するような実装は避けなければなりません。
+前者の set_config について公式ドキュメントでは以下のように記載されており、is_localでスコープをトランザクション単位なのかセッション単位なのかを指定できます。
 
-これを実現する最も簡単な実装は、クライアントからのリクエストの度にコネクションを張り直すことです。
-Nestjsでは[Injection scopes](https://docs.nestjs.com/fundamentals/injection-scopes)に記載されている`Scope.REQUEST`で実現できます。
-(set_configし直すことでも実現できますが、set_configしたコネクションが他のテナントに再利用されないことを担保する設計が必要です)
+> set_config ( setting_name text, new_value text, is_local boolean ) → text
+>
+> setting_nameパラメータにnew_valueを設定し、その値を返します。 is_localが渡され、それがtrueなら新しい値は現在のトランザクションの間にのみ適用されます。 現在のセッションで以降に新しい値を適用したければ、代わりにfalseとしてください。 このコマンドはSQLコマンドのSETに関連します。
+>
+> [https://www.postgresql.jp/docs/16/functions-admin.html](https://www.postgresql.jp/docs/16/functions-admin.html)
+
+### セッション単位で利用する場合
+
+もしセッション単位で利用する場合で、例えば PostgreSQLをコネクションプーリングと共に運用している場合、
+別テナントのユーザからのリクエストにも関わらず以前にset_configされた他テナントのコネクションを再利用するような実装は避けなければなりません。
+
+これを実現する最も簡単な実装は、クライアントからのリクエストの度にコネクションを張り直すことです。  
+(ただし再接続のためパフォーマンスが悪くなる点に注意が必要です)
+
+例えばNestjsでは[Injection scopes](https://docs.nestjs.com/fundamentals/injection-scopes)に記載されている`Scope.REQUEST`で実現できます。
+
+また、わざわざ再接続しなくても同じセッション中でset_config し直すことで設定を上書できますが、set_configした設定が、その後そのまま他のテナントで再利用されないことを担保する設計が必要です。
 
 サーバフレームワークやORMの中には自動でコネクションプーリングしてくれる(有る意味してしまう)物が多いので注意が必要です。
 
-## 補足: MySQL互換とPostgreSQL互換のDBについて
+### トランザクション単位で利用する場合
 
-GCPやAWSにはMySQL互換とPostgreSQL互換のDBが用意されていますが、Row Level Security（RLS）がPostgreSQL互換でしか利用できないという点は同じかと思います。
+トランザクション単位で set_config する場合は、トランザクションが終了するとテナント設定がリセットされるため、セッション単位での利用よりも安全です。
+DBコネクションプーリングと併用しても問題ないため、パフォーマンス上の問題も発生しません。可能であればこちらの方法がおすすめです。
 
+なお、ORMのPrismaを使う場合は以下のExampleコードが参考になるかと思います。
+(本記事の初稿時点ではPrismaのExtensionが無かったので自前でコードを書いて実現していましたが、現在はExtensionベースで書くのが良いかと思います)
+
+[prisma-client-extensions/row-level-security](https://github.com/prisma/prisma-client-extensions/blob/03a45bdf777fe31591fb1c33568d22731af334dd/row-level-security/script.ts)
