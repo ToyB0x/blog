@@ -38,7 +38,7 @@ Githubの無料の10GBのキャッシュ枠をactions/cacheから利用するこ
   id: turborepo-cache
   with:
     # turborepoのデフォルトのキャッシュ生成ディレクトリ
-    path: node_modules/.cache/turbo
+    path: node_modules/.cache/turbo # turbo v2 では .turbo/cache を指定
     # 以下は必要に応じて調整
     # ref: https://docs.github.com/ja/actions/learn-github-actions/contexts
     key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
