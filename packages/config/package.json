@@ -7,9 +7,9 @@
     "eslint-preset.js"
   ],
   "dependencies": {
-    "eslint-config-next": "14.2.7",
+    "eslint-config-next": "14.2.8",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-react": "7.35.0"
+    "eslint-plugin-react": "7.35.2"
   },
   "volta": {
     "extends": "../../package.json"
