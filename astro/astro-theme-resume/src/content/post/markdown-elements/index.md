@@ -1,8 +1,8 @@
 ---
-title: "A post of Markdown elements"
-description: "This post is for testing and listing a number of different markdown elements"
-publishDate: "22 Feb 2023"
-updatedDate: 22 Jan 2024
+title: "Markdownの動作確認"
+description: "Astro移行後のマークダウンの動作確認ページです"
+publishDate: "02 July 2000"
+updatedDate: "02 July 2000"
 tags: ["test", "markdown"]
 ---
 
