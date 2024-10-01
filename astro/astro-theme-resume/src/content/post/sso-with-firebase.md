@@ -2,6 +2,7 @@
 title: SSO with Firebase Authentication(Identity Platform)
 description: Firebase Authentication(Identity Platform)単体ではSSOに対応していませんが工夫することで簡単にSSOを実現することが出来ます。
 publishDate: 2023-8-12
+tags: ["SECURITY"]
 ---
 
 ## はじめに

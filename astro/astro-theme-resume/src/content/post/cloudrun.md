@@ -2,6 +2,7 @@
 title: CloudRunにTurborepo内のNestjsをデプロイ
 description: CloudRunにTurborepo内のNestjsをデプロイした際のメモ
 publishDate: 2022-7-1
+tags: ["GCP", "CloudRun"]
 ---
 
 ## TL;DL

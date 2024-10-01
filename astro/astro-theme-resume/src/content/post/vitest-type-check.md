@@ -2,6 +2,7 @@
 title: Vitestと型チェック
 description: Vitestの場合、テストファイルは別途型チェックが必要です
 publishDate: 2022-6-21
+tags: ["TEST"]
 ---
 
 ## はじめに

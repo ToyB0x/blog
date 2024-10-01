@@ -2,6 +2,7 @@
 title: Vitest導入
 description: Vitest導入メモです
 publishDate: 2022-6-20
+tags: ["TEST"]
 ---
 
 ## はじめに

@@ -2,6 +2,7 @@
 title: GithubのレビューリクエストのリマインドをSlackに通知
 description: GithubのSlack連携のメモ
 publishDate: 2023-10-20
+tags: ["Github", "Slack"]
 ---
 
 毎回忘れるのでメモ。

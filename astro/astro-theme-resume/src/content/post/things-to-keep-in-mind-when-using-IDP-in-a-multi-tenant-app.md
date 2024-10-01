@@ -3,6 +3,7 @@ title: マルチテナントアプリでIDPを使う上で注意すべき3つの
 description: Google CloudのIdentity Platformのセキュリティ上の注意点について
 publishDate: 2023-11-20
 recommend: true
+tags: ["SECURITY"]
 ---
 
 ## 背景など

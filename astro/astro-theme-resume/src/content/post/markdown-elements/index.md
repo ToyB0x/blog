@@ -3,7 +3,7 @@ title: "Markdownの動作確認"
 description: "Astro移行後のマークダウンの動作確認ページです"
 publishDate: "01 July 2000"
 updatedDate: "01 July 2000"
-tags: ["test", "markdown"]
+tags: ["sample"]
 ---
 
 ## This is a H2 Heading

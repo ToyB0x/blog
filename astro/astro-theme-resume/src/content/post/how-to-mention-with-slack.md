@@ -2,6 +2,7 @@
 title: GithubのSlack連携
 description: GithubのSlack連携のメモ
 publishDate: 2022-6-7
+tags: ["Github", "Slack"]
 ---
 
 毎回忘れるのでメモ。

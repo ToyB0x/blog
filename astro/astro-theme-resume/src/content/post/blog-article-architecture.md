@@ -2,6 +2,7 @@
 title: 本ブログの技術選定
 description: 本ブログの技術選定のメモ
 publishDate: 2022-5-10
+tags: ["blog", "architecture"]
 ---
 
 本ブログの記事は以下の技術で構成されています。  

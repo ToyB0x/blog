@@ -2,6 +2,7 @@
 title: JWTと認証と認可とロール
 description: JWTにロールを入れるべきかどうかについてのメモ
 publishDate: 2022-6-21
+tags: ["SECURITY"]
 ---
 
 ## JWTと認証と認可

@@ -2,6 +2,7 @@
 title: NestJSに設定モジュール追加
 description: NestJSに設定モジュールを追加して環境変数をバリデーションする方法等のメモ
 publishDate: 2022-7-18
+tags: ["NODEJS"]
 ---
 
 ## TL;DL
