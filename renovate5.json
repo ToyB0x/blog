@@ -1,6 +1,6 @@
 {
-  "schedule": "every weekend",
-  "extends": ["config:base", "group:allNonMajor", ":semanticCommits"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices", "group:allNonMajor", ":semanticCommits"],
   "reviewers": ["ToyB0x"],
   "packageRules": [
     {
