@@ -4,16 +4,16 @@ description: Vitestの場合、テストファイルは別途型チェックが�
 publishDate: 2022-6-21
 ---
 
-# はじめに
+## はじめに
 Vitestの場合、テストファイルは別途型チェックが必要です。
 Vitestはテスト高速化のためテスト実行時の型チェックを省略しているためです。
 (@swc/jestも同じです)
 
 以下、[Vitest公式リポジトリ](https://github.com/vitest-dev)を参考に設定を追加したメモです。
 
-# 各種設定
+## 各種設定
 
-## 型チェックコマンドの追加
+### 型チェックコマンドの追加
 
 ```json
 // package.json
@@ -26,9 +26,9 @@ Vitestはテスト高速化のためテスト実行時の型チェックを省�
 }
 ```
 
-## CIの追加
+### CIの追加
 ```yml
-# .github/workflows/ci.yml等
+# .github/workflows/ci.yml
   typecheck:
     runs-on: ubuntu-latest
     steps:
