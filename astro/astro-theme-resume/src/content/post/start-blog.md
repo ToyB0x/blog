@@ -6,7 +6,7 @@ publishDate: 2022-4-17
 
 ChakraとMDXとcontentlayerでブログを作りました。MDX部分は自作のOSSを利用しています。
 
-以下のマークダウンが [サンプル記事](/posts/markdown-rendering) のようにレンダリングされます。
+以下のマークダウンが [サンプル記事](/blog/markdown-elements) のようにレンダリングされます。
 
 
 ```markdown
