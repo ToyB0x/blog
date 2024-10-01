@@ -4,14 +4,14 @@ description: CloudRunにTurborepo内のNestjsをデプロイした際のメモ
 publishDate: 2022-7-1
 ---
 
-# TL;DL
+## TL;DL
 
-- GAE と違ってデフォルトのデプロイ方法ではパブリックな API ではない
-- 権限周りの調整のため何度かデプロイすることになるので、軽いパッケージで試すと良さそう
+- GAE と違ってデフォルトのデプロイ方法だけでは API はパブリックに公開されない
+- 慣れないうちは調整のため何度かデプロイすることになるので、軽いイメージで試す
 
-# 大まかな流れ
+## 大まかな流れ
 
-## API サーバの準備
+### API サーバの準備
 
 API サーバをポート 8080 固定で Listen or 環境変数`process.env.PORT`から PORT 取得
 
@@ -33,17 +33,17 @@ app.listen(port, () => {
 })
 ```
 
-## Dockerfile を書く
+### Dockerfile を書く
 
-### Port 指定について
+#### Port 指定について
 
 アプリ側で Listen しておけばコンテナ側では expose やポートバインディングは不要です。
 
-### Ignore 指定について
+#### Ignore 指定について
 
 `.dockerignore`や`.gcloudignore`を利用して不要なファイルのアップロードやコンテナ化を防ぎましょう。
 
-### モノレポ対応について
+#### モノレポ対応について
 
 以下の Dockerfile のように必要最低限のファイルのみコピーすることでコンテナ化が高速になります。
 Turborepo 内の NestJS の場合、主に必要なファイルは以下です
@@ -54,12 +54,12 @@ Turborepo 内の NestJS の場合、主に必要なファイルは以下です
 - 内部 packages は apps で import しているので/packages 丸ごとコピー  
   (API サーバで import している内部 packages だけコピーすればより高速化するはずです)
 
-### マルチステージビルドについて
+#### マルチステージビルドについて
 
 サンプル例では 200MB ほどサイズ削減できました。
 ![multi-stage-build](/posts/cloudrun/multi-stage-build.png)
 
-### Dockerfile について
+#### Dockerfile について
 
 以下にモノレポ(Turborepo)配下の NestJS コンテナ化の例を記載しました。
 
@@ -102,7 +102,7 @@ WORKDIR /opt/turborepo/apps/api
 CMD [ "node", "dist/main.js" ]
 ```
 
-## cloudbuild.yaml を書く
+### cloudbuild.yaml を書く
 
 以下のステップを含む cloudbuild.yaml を書く
 
@@ -150,7 +150,7 @@ images:
 #  machineType: 'E2_HIGHCPU_8'
 ```
 
-### Cloudbuild から CloudRun をデプロイする場合の権限
+#### Cloudbuild から CloudRun をデプロイする場合の権限
 
 権限足りていない場合はデプロイ時のエラーメッセージを元に以下等を追加して下さい。
 
@@ -161,7 +161,7 @@ images:
 
 ![iam](/posts/cloudrun/iam.png)
 
-### 公開範囲の設定
+#### 公開範囲の設定
 
 以下を参考に公開範囲を設定する
 
