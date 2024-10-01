@@ -4,7 +4,7 @@ description: JWTにロールを入れるべきかどうかについてのメモ
 publishDate: 2022-6-21
 ---
 
-# JWTと認証と認可
+## JWTと認証と認可
 
 JWTはユーザが誰であるか？の特定のため、つまり認証目的で利用されることが多いかと思います。  
 一方で認可部分、例えばRole等もJWTに含める方法があります。  
@@ -13,14 +13,14 @@ JWTはユーザが誰であるか？の特定のため、つまり認証目的�
 両者のメリデメは以下の回答が参考になります。  
 [Is setting Roles in JWT a best practice?](https://stackoverflow.com/questions/47224931/is-setting-roles-in-jwt-a-best-practice)
 
-# 具体例で考える (Identity Platform / Firebase auth)
+## 具体例で考える (Identity Platform / Firebase auth)
 
 上記の回答ではUI側や具体的な認証サーバについては触れられていません。  
 そこでGCPのIdentity Platformでカスタムクレーム内にRoleを追加する場合についてまとめました。  
 (考え方としてはAuth0等を使った場合も同じかと思います)
 
 
-## 前提知識
+### 前提知識
 - GCPの場合アクセストークンの更新は1時間毎
 - ユーザ側もサーバ側もトークンが更新されるまで、[新しいクレームは使用できない](https://cloud.google.com/identity-platform/docs/how-to-configure-custom-claims)  
   (Role更新に気付けない)
@@ -35,7 +35,7 @@ JWTはユーザが誰であるか？の特定のため、つまり認証目的�
     - Role更新時にリフレッシュトークンをRevokeし、  
       リクエスト毎にトークンがRevokeされていないかGCPに問い合わせる
 
-## JWTにRole入れる場合のPros / Cons
+### JWTにRole入れる場合のPros / Cons
 
 Pros:
 - IDPからJWT受け取り次第、Roleを含めたUIの表示が可能なので初期表示が高速になる  
@@ -50,7 +50,7 @@ Cons:
   - フロント側でトークン/UI更新処理
 
 
-# 備考1: どちらが安全か？
+## 備考1: どちらが安全か？
 
 別の切り口として、GCPからユーザが削除された場合でもアクセストークンは最大1時間有効ということになります。  
 
@@ -60,7 +60,7 @@ Cons:
 
 UI側でのハンドリングは必要ですが、見せてはいけないものを見せないようにするという意味では自前のDBでロール管理した方が安全かもしれません。
 
-# 備考2: カスタムサーバ等への移行
+## 備考2: カスタムサーバ等への移行
 
 開発が進みと、IDPのマネージドな認証サーバでは機能不足等が出てくる場合があります。  
 例えば本記事執筆時点では、IDPの2段階認証はSMS認証しかサポートしていません。  

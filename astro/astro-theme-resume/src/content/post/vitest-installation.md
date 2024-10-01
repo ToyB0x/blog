@@ -4,16 +4,16 @@ description: Vitest導入メモです
 publishDate: 2022-6-20
 ---
 
-# はじめに
+## はじめに
 テストの高速化と設定の簡略化のためVitestを導入しました。
 
 @swc/jestも試したのですがTypescriptコードのテストではvitestの方が設定が簡単です。
 これはJestと異なり、vitestはTypescriptコードを前提としているからなのかなと思います。
 (Jest関連の設定はややこしくハマると時間がとられる事があるので簡単に設定できることは大きなメリットと感じます)
 
-# セットアップ
+## セットアップ
 
-## 依存パッケージの追加
+### 依存パッケージの追加
 ```shell
 # vitestの追加
 yarn add -D vitest
@@ -22,7 +22,7 @@ yarn add -D vitest
 yarn add -D @testing-library/react
 ```
 
-## テストコマンドの追加
+### テストコマンドの追加
 ```json
 // package.json
 {
@@ -33,7 +33,7 @@ yarn add -D @testing-library/react
 }
 ```
 
-## vitest.config.tsの追加
+### vitest.config.tsの追加
 ```ts
 // vitest.config.ts
 import { defineConfig } from 'vitest/config'

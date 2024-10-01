@@ -4,19 +4,20 @@ description: 本ブログの技術選定のメモ
 publishDate: 2022-5-10
 ---
 
-本ブログの記事は以下の技術で構成されています。
+本ブログの記事は以下の技術で構成されています。  
+(2022年時点)
 
 - Markdown記法: MDX
 - メタ情報の記述: Frontmatter
 - MDXファイルの読込み: ContentLayer
 - MDXのレンダリング: 自作OSSのmdx-lib
 
-# Markdown記法
+## Markdown記法
 マークダウンではなくMDXを採用した理由は、例えばYoutubeの動画プレーヤ等を埋め込む際にマークダウンよりも使い勝手が良いためです。
 
 Next以外のフレームワーク(Gatsby等)に乗り換える際にもそのままコンテンツを流用できます。
 
-# メタ情報の記述
+## メタ情報の記述
 メタ情報の記載についてはFrontmatterを利用しています。
 ちなみに、以下のようにTypeScriptで定義することもできます。
 
@@ -35,7 +36,7 @@ const meta: Meta = {
 }
 ```
 
-# MDXファイルの読込み
+## MDXファイルの読込み
 とあるOSSのソースコードを眺めているとContentLayerというパッケージを利用してMDXファイルを読み込んでいることに気付きました。
 
 ContentLayerを使うことで`fs.readFile`のようなnodejsレベルのコードを書く手間が省けます。利用例は以下です。
@@ -88,6 +89,5 @@ const Post = (props: Props) => (
 
 ```
 
-# MDXのレンダリング
+## MDXのレンダリング
 MDXのレンダリングは自作OSSのmdx-libをnpmにパブリッシュした上で利用しています。(Vercel等からOSS認定も受けています)
-

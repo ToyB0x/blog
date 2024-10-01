@@ -1,9 +1,15 @@
 ---
-title: マークダウンのレンダリング例
-description: マークダウンのレンダリング例について
-publishDate: 2022-1-1
+title: ブログはじめました
+description: ChakraとMDXとcontentlayerでブログを作りました。MDX部分は自作のOSSを利用しています。
+publishDate: 2022-4-17
 ---
 
+ChakraとMDXとcontentlayerでブログを作りました。MDX部分は自作のOSSを利用しています。
+
+以下のマークダウンが [サンプル記事](/blog/markdown-elements) のようにレンダリングされます。
+
+
+```markdown
 
 # H1
 ## H2
@@ -34,13 +40,13 @@ paragraph
 
 ![alt text](/logo.png)
 
-```json
+'''json
 {
   "firstName": "John",
   "lastName": "Smith",
   "age": 25
 }
-```
+'''
 
 ### My Great Heading \{#custom-id\}
 
@@ -77,3 +83,5 @@ X^2^
 
 ---
 Ref: https://www.markdownguide.org/cheat-sheet/
+
+```

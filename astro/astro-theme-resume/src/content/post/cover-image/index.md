@@ -1,8 +1,8 @@
 ---
-title: "Example Cover Image"
-description: "This post is an example of how to add a cover/hero image"
-publishDate: "04 July 2023"
-updatedDate: "14 August 2023"
+title: "Coverイメージ(Heroイメージ)サンプル"
+description: "Coverイメージのサンプル投稿です"
+publishDate: "01 July 2000"
+updatedDate: "01 July 2000"
 coverImage:
   src: "./cover.png"
   alt: "Astro build wallpaper"
