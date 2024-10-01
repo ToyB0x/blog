@@ -36,8 +36,10 @@
 		"typescript": "5.4.2"
 	},
 	"devDependencies": {
+		"@playwright/test": "^1.47.2",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/typography": "0.5.10",
+		"@types/node": "^22.7.4",
 		"@typescript-eslint/parser": "7.1.1",
 		"eslint": "8.57.0",
 		"eslint-plugin-astro": "0.31.4",

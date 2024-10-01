@@ -13,7 +13,7 @@ importers:
         version: 0.5.6(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.2)
       '@astrojs/mdx':
         specifier: 2.1.1
-        version: 2.1.1(astro@4.4.15(typescript@5.4.2))
+        version: 2.1.1(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2))
       '@astrojs/rss':
         specifier: 4.0.5
         version: 4.0.5
@@ -22,19 +22,19 @@ importers:
         version: 3.1.1
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.4.15(typescript@5.4.2))(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2))(tailwindcss@3.4.1)
       '@astrojs/vercel':
         specifier: 7.3.6
-        version: 7.3.6(astro@4.4.15(typescript@5.4.2))
+        version: 7.3.6(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2))
       '@vercel/analytics':
         specifier: 1.2.2
         version: 1.2.2
       astro:
         specifier: 4.4.15
-        version: 4.4.15(typescript@5.4.2)
+        version: 4.4.15(@types/node@22.7.4)(typescript@5.4.2)
       astro-expressive-code:
         specifier: 0.33.5
-        version: 0.33.5(astro@4.4.15(typescript@5.4.2))
+        version: 0.33.5(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2))
       astro-icon:
         specifier: 1.1.0
         version: 1.1.0
@@ -66,12 +66,18 @@ importers:
         specifier: 5.4.2
         version: 5.4.2
     devDependencies:
+      '@playwright/test':
+        specifier: ^1.47.2
+        version: 1.47.2
       '@tailwindcss/aspect-ratio':
         specifier: 0.4.2
         version: 0.4.2(tailwindcss@3.4.1)
       '@tailwindcss/typography':
         specifier: 0.5.10
         version: 0.5.10(tailwindcss@3.4.1)
+      '@types/node':
+        specifier: ^22.7.4
+        version: 22.7.4
       '@typescript-eslint/parser':
         specifier: 7.1.1
         version: 7.1.1(eslint@8.57.0)(typescript@5.4.2)
@@ -663,6 +669,11 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@playwright/test@1.47.2':
+    resolution: {integrity: sha512-jTXRsoSPONAs8Za9QEQdyjFn+0ZQFjCiIztAIF6bi1HqhBzG9Ma7g1WotyiGqFSBRZjIEqMdT8RUlbk1QVhzCQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   '@rollup/pluginutils@4.2.1':
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
@@ -796,6 +807,9 @@ packages:
 
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+
+  '@types/node@22.7.4':
+    resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
 
   '@types/parse5@6.0.3':
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
@@ -1664,6 +1678,11 @@ packages:
 
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
+
+  fsevents@2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -2725,6 +2744,16 @@ packages:
   pkg-types@1.0.3:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
 
+  playwright-core@1.47.2:
+    resolution: {integrity: sha512-3JvMfF+9LJfe16l7AbSmU555PaTl2tPyQsVInqm3id16pdDfvZ8TTZ/pyzmkbDrZTQefyzU7AIHlZqQnxpqHVQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.47.2:
+    resolution: {integrity: sha512-nx1cLMmQWqmA3UsnjaaokyoUpdVaaDhJhMoxX2qj3McpjnsqFHs516QAKYhqHAgOP+oCFTEOCOAaD1RgD/RQfA==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
     engines: {node: '>= 0.4'}
@@ -3352,6 +3381,9 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
   unherit@3.0.1:
     resolution: {integrity: sha512-akOOQ/Yln8a2sgcLj4U0Jmx0R5jpIg2IUyRrWOzmEbjBtGzBdHtSeFKgoEcoH4KYIG/Pb8GQ/BwtYm0GCq1Sqg==}
 
@@ -3736,12 +3768,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@2.1.1(astro@4.4.15(typescript@5.4.2))':
+  '@astrojs/mdx@2.1.1(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2))':
     dependencies:
       '@astrojs/markdown-remark': 4.2.1
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.4.15(typescript@5.4.2)
+      astro: 4.4.15(@types/node@22.7.4)(typescript@5.4.2)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -3771,9 +3803,9 @@ snapshots:
       sitemap: 7.1.1
       zod: 3.22.4
 
-  '@astrojs/tailwind@5.1.0(astro@4.4.15(typescript@5.4.2))(tailwindcss@3.4.1)':
+  '@astrojs/tailwind@5.1.0(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2))(tailwindcss@3.4.1)':
     dependencies:
-      astro: 4.4.15(typescript@5.4.2)
+      astro: 4.4.15(@types/node@22.7.4)(typescript@5.4.2)
       autoprefixer: 10.4.18(postcss@8.4.35)
       postcss: 8.4.35
       postcss-load-config: 4.0.2(postcss@8.4.35)
@@ -3793,12 +3825,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@7.3.6(astro@4.4.15(typescript@5.4.2))':
+  '@astrojs/vercel@7.3.6(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2))':
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@vercel/analytics': 1.2.2
       '@vercel/nft': 0.26.4
-      astro: 4.4.15(typescript@5.4.2)
+      astro: 4.4.15(@types/node@22.7.4)(typescript@5.4.2)
       esbuild: 0.19.12
       fast-glob: 3.3.2
       set-cookie-parser: 2.6.0
@@ -4295,6 +4327,10 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
+  '@playwright/test@1.47.2':
+    dependencies:
+      playwright: 1.47.2
+
   '@rollup/pluginutils@4.2.1':
     dependencies:
       estree-walker: 2.0.2
@@ -4382,7 +4418,7 @@ snapshots:
 
   '@types/cheerio@0.22.35':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.7.4
 
   '@types/debug@4.1.12':
     dependencies:
@@ -4416,15 +4452,19 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
+  '@types/node@22.7.4':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/parse5@6.0.3': {}
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.7.4
 
   '@types/tar@6.1.11':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.7.4
       minipass: 4.2.8
 
   '@types/unist@2.0.10': {}
@@ -4433,7 +4473,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.7.4
     optional: true
 
   '@typescript-eslint/parser@7.1.1(eslint@8.57.0)(typescript@5.4.2)':
@@ -4701,9 +4741,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-expressive-code@0.33.5(astro@4.4.15(typescript@5.4.2)):
+  astro-expressive-code@0.33.5(astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2)):
     dependencies:
-      astro: 4.4.15(typescript@5.4.2)
+      astro: 4.4.15(@types/node@22.7.4)(typescript@5.4.2)
       hast-util-to-html: 8.0.4
       remark-expressive-code: 0.33.5
 
@@ -4715,7 +4755,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@4.4.15(typescript@5.4.2):
+  astro@4.4.15(@types/node@22.7.4)(typescript@5.4.2):
     dependencies:
       '@astrojs/compiler': 2.7.0
       '@astrojs/internal-helpers': 0.2.1
@@ -4776,8 +4816,8 @@ snapshots:
       tsconfck: 3.0.3(typescript@5.4.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.1.5
-      vitefu: 0.2.5(vite@5.1.5)
+      vite: 5.1.5(@types/node@22.7.4)
+      vitefu: 0.2.5(vite@5.1.5(@types/node@22.7.4))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -5589,6 +5629,9 @@ snapshots:
       minipass: 3.3.6
 
   fs.realpath@1.0.0: {}
+
+  fsevents@2.3.2:
+    optional: true
 
   fsevents@2.3.3:
     optional: true
@@ -6995,6 +7038,14 @@ snapshots:
       mlly: 1.6.1
       pathe: 1.1.2
 
+  playwright-core@1.47.2: {}
+
+  playwright@1.47.2:
+    dependencies:
+      playwright-core: 1.47.2
+    optionalDependencies:
+      fsevents: 2.3.2
+
   possible-typed-array-names@1.0.0: {}
 
   postcss-import@15.1.0(postcss@8.4.35):
@@ -7769,6 +7820,8 @@ snapshots:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
 
+  undici-types@6.19.8: {}
+
   unherit@3.0.1: {}
 
   unified@10.1.2:
@@ -7900,17 +7953,18 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.1.5:
+  vite@5.1.5(@types/node@22.7.4):
     dependencies:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.12.1
     optionalDependencies:
+      '@types/node': 22.7.4
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.1.5):
+  vitefu@0.2.5(vite@5.1.5(@types/node@22.7.4)):
     optionalDependencies:
-      vite: 5.1.5
+      vite: 5.1.5(@types/node@22.7.4)
 
   volar-service-css@0.0.30(@volar/language-service@2.0.4):
     dependencies:
