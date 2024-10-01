@@ -12,7 +12,8 @@
 		"format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,svelte,astro}\"",
 		"lint": "eslint \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\"",
 		"lint:fix": "eslint --fix \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\"",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"test:e2e": "playwright test"
 	},
 	"dependencies": {
 		"@astrojs/check": "0.5.6",
