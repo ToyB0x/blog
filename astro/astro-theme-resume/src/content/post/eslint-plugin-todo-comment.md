@@ -2,6 +2,7 @@
 title: チケット管理が捗るOSSを公開しました
 description: TODOコメントにチケットURLを記載してもらうためのカスタムルールを作りました。
 publishDate: 2023-6-25
+recommend: true
 ---
 
 ## 概要
