@@ -13,7 +13,7 @@
 		"lint": "eslint \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\"",
 		"lint:fix": "eslint --fix \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\"",
 		"typecheck": "tsc --noEmit",
-		"test:e2e": "playwright test"
+		"test:e2e": "start-server-and-test 'pnpm start' localhost:4321 'playwright test'"
 	},
 	"dependencies": {
 		"@astrojs/check": "0.5.6",
@@ -48,6 +48,7 @@
 		"prettier": "3.2.5",
 		"prettier-config-standard": "7.0.0",
 		"prettier-plugin-astro": "0.13.0",
-		"prettier-plugin-tailwindcss": "0.5.12"
+		"prettier-plugin-tailwindcss": "0.5.12",
+		"start-server-and-test": "2.0.8"
 	}
 }
