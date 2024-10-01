@@ -2,6 +2,7 @@
 title: Neonについて調べた
 description: スケーラブルかつ安価なデータベースを目指して開発されたNeonについて調べた
 publishDate: 2023-8-3
+tags: ["NEON", "DATABASE"]
 ---
 
 ## はじめに

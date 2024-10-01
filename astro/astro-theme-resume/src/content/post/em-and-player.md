@@ -2,6 +2,7 @@
 title: 兼任EMとして出来ること
 description: ベターな兼任EMを目指すために出来ることをまとめました。
 publishDate: 2023-7-23
+tags: ["EM", "Work"]
 ---
 
 ## 本記事の対象者

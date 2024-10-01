@@ -2,6 +2,7 @@
 title: Turborepoのリモートキャッシュ費用節約
 description: Githubのactions/cacheを利用してTurborepoのリモートキャッシュ費用を節約する方法
 publishDate: 2022-6-14
+tags: ["CI"]
 ---
 
 ## リモートキャッシュの料金体系

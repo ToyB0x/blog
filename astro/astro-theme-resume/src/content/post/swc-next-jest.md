@@ -2,6 +2,7 @@
 title: Nextのテストをswcで高速化
 description: swcをnext/jest経由で利用してテストを高速化しました。
 publishDate: 2022-7-16
+tags: ["TEST"]
 ---
 
 ## TR;DR
