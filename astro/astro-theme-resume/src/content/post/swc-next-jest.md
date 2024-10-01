@@ -4,7 +4,7 @@ description: swcをnext/jest経由で利用してテストを高速化しまし�
 publishDate: 2022-7-16
 ---
 
-TR;DR
+## TR;DR
 - jestはswcで高速化出来ます。
 - `@swc/jest`を直接使うのではなく、`next/jest`経由で利用すると楽です。
 
@@ -14,7 +14,7 @@ TR;DR
 
 - [Setting up Jest (with the Rust Compiler)](https://nextjs.org/docs/testing#setting-up-jest-with-the-rust-compiler)
 
-
+## 作業内容
 ```shell
 # turborepoの場合 apps/web等
 yarn add -D jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom

@@ -70,3 +70,8 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+/* Add code block margin */
+.expressive-code {
+	margin-bottom: 16px;
+}
