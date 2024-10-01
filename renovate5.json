@@ -5,12 +5,8 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin"],
+      "matchCurrentVersion": "!/^0/",
       "automerge": true
-    },
-    {
-      "matchPackageNames": ["node"],
-      "matchUpdateTypes": ["major", "minor", "patch", "pin"],
-      "enabled": false
     }
   ],
   "rangeStrategy": "pin"
