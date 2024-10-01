@@ -50,5 +50,13 @@
 		"prettier-plugin-astro": "0.13.0",
 		"prettier-plugin-tailwindcss": "0.5.12",
 		"start-server-and-test": "2.0.8"
+	},
+	"engines": {
+		"node": "22.9.0"
+	},
+	"packageManager": "pnpm@9.11.0",
+	"volta": {
+		"node": "22.9.0",
+		"pnpm": "9.11.0"
 	}
 }
