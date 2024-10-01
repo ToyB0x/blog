@@ -1,8 +1,8 @@
 ---
 title: "Markdownの動作確認"
 description: "Astro移行後のマークダウンの動作確認ページです"
-publishDate: "02 July 2000"
-updatedDate: "02 July 2000"
+publishDate: "01 July 2000"
+updatedDate: "01 July 2000"
 tags: ["test", "markdown"]
 ---
 
