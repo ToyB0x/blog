@@ -2,7 +2,7 @@
 title: CloudRunにTurborepo内のNestjsをデプロイ
 description: CloudRunにTurborepo内のNestjsをデプロイした際のメモ
 publishDate: 2022-7-1
-tags: ["GCP", "CloudRun"]
+tags: ['GCP', 'CloudRun']
 ---
 
 ## TL;DL
@@ -23,14 +23,14 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  const name = process.env.NAME || 'World'
-  res.send(`Hello ${name}!`)
+	const name = process.env.NAME || 'World'
+	res.send(`Hello ${name}!`)
 })
 
 // process.env.PORTからポート取得
 const port = parseInt(process.env.PORT) || 8080
 app.listen(port, () => {
-  console.log(`helloworld: listening on port ${port}`)
+	console.log(`helloworld: listening on port ${port}`)
 })
 ```
 
@@ -136,7 +136,7 @@ steps:
         '--region',
         'asia-northeast1',
         '--max-instances',
-        '10',
+        '10'
         # --allow-unauthenticatedで公開（未認証）アクセスを許可 (許可範囲変更には初回デプロイ後数分かかる)出来るはずだが以下理由で適用されない場合があるためGUI等で設定
         # ref1: https://stackoverflow.com/a/68085858
         # ref2: https://cloud.google.com/sdk/gcloud/reference/run/deploy

@@ -3,10 +3,11 @@ title: チケット管理が捗るOSSを公開しました
 description: TODOコメントにチケットURLを記載してもらうためのカスタムルールを作りました。
 publishDate: 2023-6-25
 recommend: true
-tags: ["OSS", "ESLint"]
+tags: ['OSS', 'ESLint']
 ---
 
 ## 概要
+
 以下のようにTODOコメントにチケットURLを記載してもらうためのカスタムルールを作りました。
 
 - [NPMパッケージ](https://www.npmjs.com/package/eslint-plugin-todo-comment)
@@ -28,7 +29,8 @@ const sum = (numbers: number[]) =>  numbers.reduce((acc, cur) => acc + cur, 0)
 ```
 
 ## 背景
-今年から今までのテックリードの役割に加えて、EM(engineering manager)としても活動することになりました。  
+
+今年から今までのテックリードの役割に加えて、EM(engineering manager)としても活動することになりました。
 
 立場的に自分でバリバリコードを書くというだけではなく、チームの生産性を上げるための仕組み作りの視点も必要になってきます。
 
@@ -38,6 +40,7 @@ const sum = (numbers: number[]) =>  numbers.reduce((acc, cur) => acc + cur, 0)
 そこで、TODOコメントにチケットURLを記載してもらうためのカスタムルールを作りました。
 
 ## 運用
+
 yarn lintでTODOコメントをチェックするようにして、GithubAction等のCI中でルール違反の場合にエラーを出すよう設定しておくと良いと思います。
 
 ```jsonc

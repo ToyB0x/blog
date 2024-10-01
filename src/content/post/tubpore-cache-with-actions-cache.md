@@ -2,7 +2,7 @@
 title: Turborepoのリモートキャッシュ費用節約
 description: Githubのactions/cacheを利用してTurborepoのリモートキャッシュ費用を節約する方法
 publishDate: 2022-6-14
-tags: ["CI"]
+tags: ['CI']
 ---
 
 ## リモートキャッシュの料金体系
@@ -19,7 +19,7 @@ https://vercel.com/docs/concepts/monorepos/remote-caching
 その場合100回CIを回すと無料枠を使い切ってしまい、さらに100回CIを回すと5ドルかかる計算になります。
 
 開発人数が多いと1日100回ぐらいCIを回すことは十分あり得ます。
-その場合の月間コストは大雑把に5 * 30 = 150ドル程度になります。
+その場合の月間コストは大雑把に5 \* 30 = 150ドル程度になります。
 
 ## 無料のactions/cacheによる代用
 

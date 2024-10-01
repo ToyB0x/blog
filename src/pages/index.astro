@@ -14,7 +14,18 @@ import { getAllPosts, sortMDByDate } from '@/utils'
 
 const languages = ['TypeScript', 'Golang', 'Python']
 const frontend = ['React', 'Vue.js', 'Next.js', 'Remix', 'WXT (browser extension)']
-const backend = ['Node.js', 'NestJS', 'GraphQL Yoga', 'Hono', 'Prisma', 'Drizzle', 'Chi', 'SQLBoiler', 'Django', 'Scrapy' ]
+const backend = [
+	'Node.js',
+	'NestJS',
+	'GraphQL Yoga',
+	'Hono',
+	'Prisma',
+	'Drizzle',
+	'Chi',
+	'SQLBoiler',
+	'Django',
+	'Scrapy'
+]
 const others = ['Terraform', 'Ansible', 'Pulumi']
 
 const MAX_POSTS = 10
@@ -25,12 +36,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
-			<Image
-				src={astro}
-				alt='profile photo'
-				class='h-28 w-auto p-2'
-				loading='eager'
-			/>
+			<Image src={astro} alt='profile photo' class='h-28 w-auto p-2' loading='eager' />
 
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-3xl font-bold'>ToyB0x</h1>
@@ -65,21 +71,19 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label
-						title='Github'
-						as='a'
-						href='https://github.com/ToyB0x'
-						target='_blank'
-					>
-						<svg xmlns="http://www.w3.org/2000/svg"
-							 viewBox='0 0 24 24'
-							 class='h-5 w-5'
-							 slot='icon'
-							 fill="none"
-							 stroke="currentColor">
-								<path
-									d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-								<path d="M9 18c-4.51 2-5-2-7-2"/>
+					<Label title='Github' as='a' href='https://github.com/ToyB0x' target='_blank'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							viewBox='0 0 24 24'
+							class='h-5 w-5'
+							slot='icon'
+							fill='none'
+							stroke='currentColor'
+						>
+							<path
+								d='M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4'
+							></path>
+							<path d='M9 18c-4.51 2-5-2-7-2'></path>
 						</svg>
 					</Label>
 				</div>
@@ -88,30 +92,31 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p>
-				TypeScript / Golang 等でお仕事しているエンジニアです(フロント/サーバ両対応)。 普段は3-shakeのあるチームの開発リーダとして和気あいあいと仕事させて貰っています🚀
+				TypeScript / Golang 等でお仕事しているエンジニアです(フロント/サーバ両対応)。
+				普段は3-shakeのあるチームの開発リーダとして和気あいあいと仕事させて貰っています🚀
 			</p>
 		</Section>
 		<Section title='Publications'>
 			<ul class='flex flex-col gap-y-2'>
 				<li class='flex flex-col gap-x-2 sm:flex-row'>
-					<a href="https://gihyo.jp/article/2024/07/hosting-honeypot-on-cloud-01" target="_blank">
+					<a href='https://gihyo.jp/article/2024/07/hosting-honeypot-on-cloud-01' target='_blank'>
 						3大クラウド×日米両リージョンでハニーポットを動かしてみる (技術評論社様 寄稿記事)
 					</a>
 				</li>
 				<li class='flex flex-col gap-x-2 sm:flex-row'>
-					<a href="https://techbookfest.org/product/7YmreZxhKtPMKpq1LYXSkF" target="_blank">
+					<a href='https://techbookfest.org/product/7YmreZxhKtPMKpq1LYXSkF' target='_blank'>
 						Pulumi を利用したエフェメラル環境でのインテグレーションテスト (技術書典)
 					</a>
 				</li>
 				<li class='flex flex-col gap-x-2 sm:flex-row'>
-					<a href="https://github.com/ToyB0x/batch-processing-best-practices" target="_blank">
+					<a href='https://github.com/ToyB0x/batch-processing-best-practices' target='_blank'>
 						バッチ処理ベストプラクティス集 (OSS)
 					</a>
 				</li>
 			</ul>
 		</Section>
 
-			{
+		{
 			allPostsByDate.length > 0 && (
 				<Section title='Posts'>
 					<ul class='flex flex-col gap-y-2'>
@@ -126,11 +131,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		}
 
 		<Section title='Experience'>
-			<Card
-				heading='3-shake'
-				subheading='Full Cycle Developer / Dev Team Leader'
-				date='2021 - Now'
-			>
+			<Card heading='3-shake' subheading='Full Cycle Developer / Dev Team Leader' date='2021 - Now'>
 				<ul class='ml-4 list-disc text-muted-foreground'>
 					<li>フロント側開発やチームのサポート(Next.js / Remixの導入や運用・実装支援)</li>
 					<li>サーバ側開発 (NestJS / GraphQL Yoga / Prismaの導入等含む、新機能開発)</li>
@@ -138,12 +139,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<li>CI/CD構築 (CloudBuild / Github Actionsで構築)</li>
 				</ul>
 			</Card>
-			<Card
-				heading='Freelance'
-				subheading='Full Stack Developer'
-				date='2015 - 2021'
-			>
-			</Card>
+			<Card heading='Freelance' subheading='Full Stack Developer' date='2015 - 2021' />
 		</Section>
 
 		<Section title='Projects'>
