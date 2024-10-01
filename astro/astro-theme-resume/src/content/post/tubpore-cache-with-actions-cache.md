@@ -4,7 +4,7 @@ description: Githubのactions/cacheを利用してTurborepoのリモートキャ
 publishDate: 2022-6-14
 ---
 
-# リモートキャッシュの料金体系
+## リモートキャッシュの料金体系
 
 Turborepoのリモートキャッシュは結構高額かなと思います。
 本記事執筆時点の料金体系は以下です。
@@ -12,7 +12,7 @@ Turborepoのリモートキャッシュは結構高額かなと思います。
 ![price](/posts/tubpore-cache-with-actions-cache/price.png)
 https://vercel.com/docs/concepts/monorepos/remote-caching
 
-# リモートキャッシュのコスト試算
+## リモートキャッシュのコスト試算
 
 サイズの大きいモノレポならば一度のCIで100MBぐらいは消費してしまうのではないでしょうか？
 その場合100回CIを回すと無料枠を使い切ってしまい、さらに100回CIを回すと5ドルかかる計算になります。
@@ -20,7 +20,7 @@ https://vercel.com/docs/concepts/monorepos/remote-caching
 開発人数が多いと1日100回ぐらいCIを回すことは十分あり得ます。
 その場合の月間コストは大雑把に5 * 30 = 150ドル程度になります。
 
-# 無料のをactions/cacheによる代用
+## 無料のactions/cacheによる代用
 
 リモートキャッシュは便利なので、この程度ならばそのまま利用しても良いのですが、
 Githubの無料の10GBのキャッシュ枠をactions/cacheから利用することで節約することができます。
