@@ -1,4 +1,3 @@
 # ToyB0x Blog
 
 [toyb0x.me](https://toyb0x.me)
-
