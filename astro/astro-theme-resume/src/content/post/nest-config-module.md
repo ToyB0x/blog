@@ -4,17 +4,17 @@ description: NestJSに設定モジュールを追加して環境変数をバリ�
 publishDate: 2022-7-18
 ---
 
-# TL;DL
+## TL;DL
 
 - @nestjs/configを使いましょう
 - 環境変数のバリデーションをしましょう
 - 環境変数もDIしましょう
 - 詳細は[こちらのPR](https://github.com/g-dash/g-dash/pull/19)から確認できます
 
-# 全体の流れ
+## 全体の流れ
 [公式ドキュメント](https://docs.nestjs.com/techniques/configuration)を参考に以下の流れで導入します。
 
-## 依存パッケージのインストール
+### 依存パッケージのインストール
 ```shell
 # config用
 yarn add @nestjs/config
@@ -24,7 +24,7 @@ yarn add joi
 
 ```
 
-## 設定モジュールを全体適用
+### 設定モジュールを全体適用
 ```ts
 // app.module.ts
 import { ConfigModule } from '@nestjs/config';
@@ -38,7 +38,7 @@ import { ConfigModule } from '@nestjs/config';
 export class AppModule {}
 ```
 
-## 設定サービスの作成
+### 設定サービスの作成
 ```ts
 // /src/modules/configs/configs.service.ts 等
 import { Injectable } from '@nestjs/common';
@@ -61,7 +61,7 @@ export class ApiConfigService {
 }
 ```
 
-## バリデータの追加
+### バリデータの追加
 ```ts
 // /src/modules/configs/configs.validator.ts 等
 import * as Joi from 'joi';
@@ -77,7 +77,7 @@ export const validationSchema = Joi.object({
 });
 ```
 
-## プロバイダに設定サービス追加
+### プロバイダに設定サービス追加
 
 ```ts
 {
@@ -86,7 +86,7 @@ export const validationSchema = Joi.object({
 }
 ```
 
-## コンストラクタに設定サービス追加
+### コンストラクタに設定サービス追加
 ```ts
 // ...snip
 constructor(private readonly apiConfigService: ApiConfigService) {}
