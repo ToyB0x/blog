@@ -1,9 +1,9 @@
 ---
-title: "Markdownの動作確認"
-description: "Astro移行後のマークダウンの動作確認ページです"
-publishDate: "01 July 2000"
-updatedDate: "01 July 2000"
-tags: ["sample"]
+title: 'Markdownの動作確認'
+description: 'Astro移行後のマークダウンの動作確認ページです'
+publishDate: '01 July 2000'
+updatedDate: '01 July 2000'
+tags: ['sample']
 ---
 
 ## This is a H2 Heading
@@ -100,10 +100,10 @@ Syntax highlighting
 
 ```js
 var foo = function (bar) {
-	return bar++;
-};
+	return bar++
+}
 
-console.log(foo(5));
+console.log(foo(5))
 ```
 
 ### Expressive code examples
@@ -111,7 +111,7 @@ console.log(foo(5));
 Adding a title
 
 ```js title="file.js"
-console.log("Title example");
+console.log('Title example')
 ```
 
 A bash terminal
@@ -124,11 +124,11 @@ Highlighting code lines
 
 ```js title="line-markers.js" del={2} ins={3-4} {6}
 function demo() {
-	console.log("this line is marked as deleted");
+	console.log('this line is marked as deleted')
 	// This line and the next one are marked as inserted
-	console.log("this is the second inserted line");
+	console.log('this is the second inserted line')
 
-	return "this line uses the neutral default marker type";
+	return 'this line uses the neutral default marker type'
 }
 ```
 

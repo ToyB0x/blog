@@ -2,7 +2,7 @@
 title: LT, TurborepoとVitestでCI/テスト高速化
 description: LTの内容をアップしました
 publishDate: 2022-7-2
-tags: ["CI", "TEST"]
+tags: ['CI', 'TEST']
 ---
 
 ![title](/posts/turborepo-and-vitest/title.png)

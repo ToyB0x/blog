@@ -8,19 +8,20 @@ ChakraとMDXとcontentlayerでブログを作りました。MDX部分は自作�
 
 以下のマークダウンが [サンプル記事](/blog/markdown-elements) のようにレンダリングされます。
 
-
 ```markdown
-
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
 
 paragraph
 
 **bold text**
 
-*italicized text*
+_italicized text_
 
 > blockquote
 
@@ -42,9 +43,9 @@ paragraph
 
 '''json
 {
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
+"firstName": "John",
+"lastName": "Smith",
+"age": 25
 }
 '''
 
@@ -53,12 +54,13 @@ paragraph
 ---
 
 # TODO: GitHub Flavored Markdown
+
 (when esm available in next.config.js, add remark-gfm as plugin)
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
 Here's a sentence with a footnote. [^1]
 
@@ -82,6 +84,6 @@ H~2~O
 X^2^
 
 ---
-Ref: https://www.markdownguide.org/cheat-sheet/
 
+Ref: https://www.markdownguide.org/cheat-sheet/
 ```

@@ -2,7 +2,7 @@
 title: マルチテナントサービスのDB選定(MySQLかPostgreSQLか？)
 description: マルチテナントサービス、高速なMySQLと高機能なPostgreSQL、そしてRow Level Security（RLS）について
 publishDate: 2022-6-12
-tags: ["IDP", "GCP", "MultiTenant", "DATABASE"]
+tags: ['IDP', 'GCP', 'MultiTenant', 'DATABASE']
 ---
 
 ## TL;DR

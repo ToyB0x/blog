@@ -2,10 +2,11 @@
 title: Vitest導入
 description: Vitest導入メモです
 publishDate: 2022-6-20
-tags: ["TEST"]
+tags: ['TEST']
 ---
 
 ## はじめに
+
 テストの高速化と設定の簡略化のためVitestを導入しました。
 
 @swc/jestも試したのですがTypescriptコードのテストではvitestの方が設定が簡単です。
@@ -15,6 +16,7 @@ tags: ["TEST"]
 ## セットアップ
 
 ### 依存パッケージの追加
+
 ```shell
 # vitestの追加
 yarn add -D vitest
@@ -24,25 +26,27 @@ yarn add -D @testing-library/react
 ```
 
 ### テストコマンドの追加
+
 ```json
 // package.json
 {
-  "scripts": {
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
-  },
+	"scripts": {
+		"test": "vitest",
+		"coverage": "vitest run --coverage"
+	}
 }
 ```
 
 ### vitest.config.tsの追加
+
 ```ts
 // vitest.config.ts
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
-  test: {
-    globals: true,
-    environment: 'jsdom', // Reactの場合
-  },
+	test: {
+		globals: true,
+		environment: 'jsdom' // Reactの場合
+	}
 })
 ```

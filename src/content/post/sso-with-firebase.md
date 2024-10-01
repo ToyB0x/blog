@@ -2,7 +2,7 @@
 title: SSO with Firebase Authentication(Identity Platform)
 description: Firebase Authentication(Identity Platform)単体ではSSOに対応していませんが工夫することで簡単にSSOを実現することが出来ます。
 publishDate: 2023-8-12
-tags: ["SECURITY"]
+tags: ['SECURITY']
 ---
 
 ## はじめに
@@ -16,6 +16,7 @@ Firebase Authentication(又はIdentity Platform)単体ではSSOに対応して�
 
 前述の通り、IDP単体ではSSOに対応していません。  
 またIDPを用いたバックエンドサーバの認証では、通常以下のフローで認証処理を行うかと思います。
+
 1. クライアントサイドでFirebase Auth(IDP)へログイン
 2. 上記で発行されたJWTをヘッダにつけてバックエンドサーバに送信
 3. バックエンドサーバはFirebaseSDKなどを利用して上記ヘッダ内のJWTをVerify
@@ -26,8 +27,6 @@ Firebase Authentication(又はIdentity Platform)単体ではSSOに対応して�
 
 SSOを実現したいサイトのFQDNがa.domain.com / b.domain.comのように、メインのドメイン部分が同じ`domain.com`の場合はCookieをシェアできます。Firebase利用時もこのドメイン属性指定したCookieを利用することでSSOを実現可能です。  
 (Cookieのドメイン属性に`domain=domain.com`を指定)
-
-
 
 参考資料: [MDN Domain 属性](https://developer.mozilla.org/ja/docs/Web/HTTP/Cookies)
 
