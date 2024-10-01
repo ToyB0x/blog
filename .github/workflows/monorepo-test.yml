@@ -13,36 +13,26 @@ jobs:
       - name: Check out
         uses: actions/checkout@v4
 
-      - name: node setup (via volta)
-        uses: volta-cli/action@v4
+      - name: Enable corepack for pnpm
+        run: corepack enable pnpm
 
       - name: Restore Node cache
         uses: actions/setup-node@v4
         with:
-          cache: 'yarn'
+          cache: 'pnpm'
           node-version-file: 'package.json'
 
       - name: Install all packages
-        run: yarn install --immutable --mode=skip-build
-
-      - name: Turborepo Cache
-        uses: actions/cache@v4
-        with:
-          path: .turbo/cache
-          key:
-            turbo/${{ env.CACHE_VERSION }}/${{ github.job }}/${{ github.ref_name }}/${{ github.sha }}
-          restore-keys: |
-            turbo/${{ env.CACHE_VERSION }}/${{ github.job }}/${{ github.ref_name }}/
-            turbo/${{ env.CACHE_VERSION }}/${{ github.job }}/
+        run: pnpm install --frozen-lockfile
 
       - name: Format check
-        run: yarn format:check
+        run: pnpm format:check
 
       - name: Lint check
-        run: yarn lint
+        run: pnpm lint
 
       - name: Build check
-        run: yarn build
+        run: pnpm build
 
       - name: Type check
-        run: yarn typecheck
+        run: pnpm typecheck
