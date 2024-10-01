@@ -17,8 +17,6 @@ publishDate: 2023-6-25
 const sum = (numbers: number[]) =>  numbers.reduce((acc, cur) => acc + cur, 0)
 ```
 
-<div class="mt-4"></div>
-
 ```typescript
 🙆 GOODな例: チケットURLが記載されている(チケット管理システム等で負債を可視化できる)
 
@@ -48,8 +46,6 @@ yarn lintでTODOコメントをチェックするようにして、GithubAction�
   }
 }
 ```
-
-<div class="mt-4"></div>
 
 ```yaml
 # github-action.yml
