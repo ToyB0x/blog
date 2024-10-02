@@ -31,7 +31,7 @@ if (imagePath) {
 	href={href}
 >
 	{
-		imagePath && (
+		imagePath && images[imagePath] && (
 			<Image
 				src={images[imagePath]()}
 				alt={altText}

@@ -33,8 +33,7 @@
 		"remark-unwrap-images": "4.0.0",
 		"sharp": "0.33.5",
 		"tailwind-merge": "2.5.2",
-		"tailwindcss": "3.4.13",
-		"typescript": "5.6.2"
+		"tailwindcss": "3.4.13"
 	},
 	"devDependencies": {
 		"@playwright/test": "1.47.2",
@@ -49,7 +48,8 @@
 		"prettier-config-standard": "7.0.0",
 		"prettier-plugin-astro": "0.14.1",
 		"prettier-plugin-tailwindcss": "0.6.8",
-		"start-server-and-test": "2.0.8"
+		"start-server-and-test": "2.0.8",
+		"typescript": "5.6.2"
 	},
 	"engines": {
 		"node": "20.17.0"
