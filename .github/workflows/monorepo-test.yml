@@ -25,11 +25,8 @@ jobs:
       - name: Install all packages
         run: pnpm install --frozen-lockfile
 
-      - name: Format check
-        run: pnpm format:check
-
-      - name: Lint check
-        run: pnpm lint
+      - name: biome check
+        run: biome check
 
       - name: Build check
         run: pnpm build
