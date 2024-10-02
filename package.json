@@ -8,13 +8,10 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"format": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,svelte,astro}\"",
-		"format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,md,mdx,svelte,astro}\"",
-		"lint": "eslint \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\"",
-		"lint:fix": "eslint --fix \"src/**/*.{js,ts,jsx,tsx,svelte,astro}\"",
-		"typecheck": "tsc --noEmit",
 		"check": "biome check",
-		"check:apply": "biome check --apply",
+		"check:write": "biome check --write",
+		"check:write:unsafe": "biome check --write --unsafe",
+		"typecheck": "tsc --noEmit",
 		"test:e2e": "start-server-and-test 'pnpm start' localhost:4321 'playwright test'"
 	},
 	"dependencies": {
