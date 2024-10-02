@@ -7,10 +7,9 @@ export interface TocItem extends MarkdownHeading {
 function diveChildren(item: TocItem, depth: number): Array<TocItem> {
 	if (depth === 1 || !item.subheadings.length) {
 		return item.subheadings
-	} else {
-		// e.g., 2
-		return diveChildren(item.subheadings[item.subheadings.length - 1] as TocItem, depth - 1)
 	}
+	// e.g., 2
+	return diveChildren(item.subheadings[item.subheadings.length - 1] as TocItem, depth - 1)
 }
 
 export function generateToc(headings: ReadonlyArray<MarkdownHeading>) {
