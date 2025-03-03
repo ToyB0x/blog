@@ -19,11 +19,11 @@
 		"@astrojs/mdx": "3.1.9",
 		"@astrojs/rss": "4.0.11",
 		"@astrojs/sitemap": "3.2.1",
-		"@astrojs/tailwind": "5.1.4",
+		"@astrojs/tailwind": "5.1.5",
 		"@astrojs/vercel": "7.8.2",
-		"@vercel/analytics": "1.4.1",
+		"@vercel/analytics": "1.5.0",
 		"astro": "4.16.18",
-		"astro-expressive-code": "0.38.3",
+		"astro-expressive-code": "0.40.2",
 		"astro-icon": "1.1.5",
 		"clsx": "2.1.1",
 		"mdast-util-to-string": "4.0.0",
@@ -36,19 +36,19 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@playwright/test": "1.49.1",
+		"@playwright/test": "1.50.1",
 		"@tailwindcss/aspect-ratio": "0.4.2",
-		"@tailwindcss/typography": "0.5.15",
-		"@types/node": "22.10.5",
-		"start-server-and-test": "2.0.9",
-		"typescript": "5.7.2"
+		"@tailwindcss/typography": "0.5.16",
+		"@types/node": "22.13.9",
+		"start-server-and-test": "2.0.10",
+		"typescript": "5.8.2"
 	},
 	"engines": {
-		"node": "20.18.1"
+		"node": "20.18.3"
 	},
-	"packageManager": "pnpm@9.15.3",
+	"packageManager": "pnpm@9.15.6",
 	"volta": {
-		"node": "20.18.1",
-		"pnpm": "9.15.3"
+		"node": "20.18.3",
+		"pnpm": "9.15.6"
 	}
 }
