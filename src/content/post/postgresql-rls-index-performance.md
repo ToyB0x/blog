@@ -2,6 +2,7 @@
 title: PostgreSQL RLS環境でのインデックス戦略分析
 description: PostgreSQL Row Level Security環境でREAD性能とCASCADE DELETE性能に最適なインデックス戦略は本当に異なるのか？実データで検証した結果
 publishDate: 2025-06-25
+recommend: true
 tags: ['PostgreSQL', 'DATABASE', 'RLS', 'Performance']
 ---
 
