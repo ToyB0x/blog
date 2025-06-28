@@ -39,7 +39,7 @@
 		"@playwright/test": "1.53.1",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/typography": "0.5.16",
-		"@types/node": "22.15.33",
+		"@types/node": "22.15.34",
 		"start-server-and-test": "2.0.12",
 		"typescript": "5.8.3"
 	},
