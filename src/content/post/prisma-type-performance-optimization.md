@@ -1,8 +1,8 @@
 ---
-title: Prisma型処理性能最適化 - 100倍高速化のアプローチ
+title: Prisma型処理を最適化 - 100倍高速化のアプローチ
 description: PrismaクライアントのTypeScript型処理性能を劇的に改善する手法。実測で100倍の高速化を実現したアプローチを解説
 publishDate: 2025-06-29
-recommend: true
+recommend: false
 tags: ['Prisma', 'TypeScript', 'Performance', 'Optimization']
 ---
 
