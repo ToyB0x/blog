@@ -32,10 +32,13 @@ PrismaクライアントをExtensionで拡張する際のアプローチが、�
 
 ### 1. Heavy Approach（ベースライン）
 ```typescript
-// 重い型処理アプローチ
-const heavyExtension = client.$extends({
-  // 全てのPrismaClient型を渡す実装
-});
+const extendPrisma = (PrismaClient: PrismaClient) => {
+  console.log("Extend PrismaClient with some logger and other features...");
+  return PrismaClient;
+};
+
+const client = new PrismaClient({ datasourceUrl: "file:./sample.db" });
+const extendedClient = extendPrisma(client);
 ```
 
 **結果:**
@@ -45,13 +48,14 @@ const heavyExtension = client.$extends({
 
 ### 2. Interface Approach
 ```typescript
-// interface制限アプローチ
-interface LimitedClient {
-  // 必要最小限のインターフェース定義
+interface IPrismaClient {
+  $extends: PrismaClient['$extends']
 }
 
-const interfaceExtension = (client: LimitedClient) => {
-  // 制限されたインターフェースでの実装
+const extendPrisma = <T extends IPrismaClient>(prisma: T): T => {
+  return prisma.$extends({
+    // extension logic
+  });
 };
 ```
 
@@ -62,9 +66,12 @@ const interfaceExtension = (client: LimitedClient) => {
 
 ### 3. Typeof Approach（推奨）
 ```typescript
-// typeof活用アプローチ
-const typeofExtension = <T extends typeof PrismaClient>(client: T) => {
-  // typeof制約による型推論制限
+const basePrisma = new PrismaClient();
+
+const extendPrisma = (prisma: typeof basePrisma) => {
+  return prisma.$extends({
+    // extension logic
+  });
 };
 ```
 
