@@ -1,16 +1,14 @@
 ---
+import { Image } from 'astro:assets'
 import PostPreview from '@/components/blog/PostPreview.astro'
+import { getAllPosts, sortMDByDate } from '@/utils'
+import astro from '../assets/avatar/avatar.png'
 import Card from '../components/Card.astro'
 import Label from '../components/Label.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Section from '../components/Section.astro'
 import SkillLayout from '../components/SkillLayout.astro'
 import PageLayout from '../layouts/BaseLayout.astro'
-
-import { Image } from 'astro:assets'
-import astro from '../assets/avatar/avatar.png'
-
-import { getAllPosts, sortMDByDate } from '@/utils'
 
 const languages = ['TypeScript', 'Golang', 'Python']
 const frontend = ['React', 'Vue.js', 'Next.js', 'Remix', 'WXT (browser extension)']

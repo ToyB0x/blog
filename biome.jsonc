@@ -1,7 +1,14 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
-	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
-	"files": { "ignoreUnknown": false, "ignore": [".astro/types.d.ts", ".astro/astro/content.d.ts"] },
+	"$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": ["**", "!**/.astro/types.d.ts", "!**/.astro/astro/content.d.ts"]
+	},
 	"formatter": {
 		"enabled": true,
 		"useEditorconfig": true,
@@ -12,10 +19,27 @@
 		"lineWidth": 100,
 		"attributePosition": "auto",
 		"bracketSpacing": true,
-		"ignore": ["node_modules/**"]
+		"includes": ["**", "!**/node_modules/**"]
 	},
-	"organizeImports": { "enabled": true },
-	"linter": { "enabled": true, "rules": { "recommended": true } },
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noParameterAssign": "error",
+				"useAsConstAssertion": "error",
+				"useDefaultParameterLast": "error",
+				"useEnumInitializers": "error",
+				"useSelfClosingElements": "error",
+				"useSingleVarDeclarator": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useNumberNamespace": "error",
+				"noInferrableTypes": "error",
+				"noUselessElse": "error"
+			}
+		}
+	},
 	"javascript": {
 		"formatter": {
 			"jsxQuoteStyle": "single",
@@ -29,5 +53,5 @@
 			"bracketSpacing": true
 		}
 	},
-	"overrides": [{ "include": ["*.astro"] }]
+	"overrides": [{ "includes": ["**/*.astro"] }]
 }
