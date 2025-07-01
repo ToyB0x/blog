@@ -6,8 +6,12 @@ recommend: false
 tags: ['Prisma', 'TypeScript', 'Performance', 'Optimization']
 ---
 
-The verification code used in this article can be viewed at:  
-https://github.com/ToyB0x/ts-bench/pull/190
+## Notes
+
+- This article is a rewrite of an [article posted on Zenn (Japanese article)](https://zenn.dev/toyb0x/articles/b43251f6ce65fb).
+- This text is a simplified and AI-translated version of the original Japanese article.
+- The code used in this article can be viewed at:  
+  https://github.com/ToyB0x/ts-bench/pull/190
 
 ## TL;DR
 
@@ -111,8 +115,3 @@ Avoid passing entire PrismaClient types within Extensions
 Prisma type processing can achieve dramatic performance improvements with the right approach. Particularly through typeof constraint utilization, significant reductions in type count and type instantiations, along with 100x execution time speedup, can be realized.
 
 In large-scale Prisma projects, being mindful of type processing performance during Extension design can lead to substantial improvements in developer experience.
-
-## Additional Notes
-
-- This article is a rewrite of an [article posted on Zenn](https://zenn.dev/toyb0x/articles/b43251f6ce65fb).
-- This text is a simplified and AI-translated version of the original Japanese article.
