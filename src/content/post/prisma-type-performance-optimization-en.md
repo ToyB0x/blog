@@ -114,6 +114,5 @@ In large-scale Prisma projects, being mindful of type processing performance dur
 
 ## Additional Notes
 
-This article is a rewrite of an [article posted on Zenn](https://zenn.dev/toyb0x/articles/b43251f6ce65fb).
-
-This text is a simplified and AI-translated version of the original Japanese article.
+- This article is a rewrite of an [article posted on Zenn](https://zenn.dev/toyb0x/articles/b43251f6ce65fb).
+- This text is a simplified and AI-translated version of the original Japanese article.
