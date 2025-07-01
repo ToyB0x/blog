@@ -1,6 +1,6 @@
 ---
 title: Optimizing Prisma Related Type, A 100x Improvement Approach
-description: Dramatically improve TypeScript type processing performance in Prisma clients. Learn the approach that achieved 100x speedup in real-world measurements
+description: Dramatically improve TypeScript type processing performance in Prisma clients. Learn the approach that achieved 100x improvement in real-world measurements
 publishDate: 2025-07-01
 recommend: false
 tags: ['Prisma', 'TypeScript', 'Performance', 'Optimization']
@@ -112,6 +112,6 @@ Avoid passing entire PrismaClient types within Extensions
 
 ## Conclusion
 
-Prisma type processing can achieve dramatic performance improvements with the right approach. Particularly through typeof constraint utilization, significant reductions in type count and type instantiations, along with 100x execution time speedup, can be realized.
+Prisma type processing can achieve dramatic performance improvements with the right approach. Particularly through typeof constraint utilization, significant reductions in type count and type instantiations, along with 100x execution time improvement, can be realized.
 
 In large-scale Prisma projects, being mindful of type processing performance during Extension design can lead to substantial improvements in developer experience.
