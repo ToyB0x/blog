@@ -8,7 +8,7 @@ tags: ['Prisma', 'TypeScript', 'Performance', 'Optimization']
 
 ## Notes
 
-- This article is a rewrite of an [article posted on Zenn (Japanese article)](https://zenn.dev/toyb0x/articles/b43251f6ce65fb).
+- This article is a rewrite of [Zenn Japanese article](https://zenn.dev/toyb0x/articles/b43251f6ce65fb).
 - This text is a simplified and AI-translated version of the original Japanese article.
 - The code used in this article can be viewed at:  
   https://github.com/ToyB0x/ts-bench/pull/190
