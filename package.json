@@ -22,7 +22,7 @@
 		"@astrojs/tailwind": "6.0.2",
 		"@astrojs/vercel": "8.2.0",
 		"@vercel/analytics": "1.5.0",
-		"astro": "5.10.1",
+		"astro": "5.10.2",
 		"astro-expressive-code": "0.41.2",
 		"astro-icon": "1.1.5",
 		"clsx": "2.1.1",
@@ -39,7 +39,7 @@
 		"@playwright/test": "1.53.2",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/typography": "0.5.16",
-		"@types/node": "22.15.34",
+		"@types/node": "22.16.0",
 		"start-server-and-test": "2.0.12",
 		"typescript": "5.8.3"
 	},
