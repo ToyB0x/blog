@@ -17,7 +17,6 @@ export function generateToc(headings: ReadonlyArray<MarkdownHeading>) {
 	const bodyHeadings = [...headings.filter(({ depth }) => depth > 1)]
 	const toc: Array<TocItem> = []
 
-	// biome-ignore lint/complexity/noForEach: refactor later
 	bodyHeadings.forEach((h) => {
 		const heading: TocItem = { ...h, subheadings: [] }
 

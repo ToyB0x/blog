@@ -21,7 +21,7 @@
 		"@astrojs/sitemap": "3.7.4",
 		"@astrojs/tailwind": "6.0.2",
 		"@astrojs/vercel": "9.0.5",
-		"@vercel/analytics": "1.6.1",
+		"@vercel/analytics": "2.0.1",
 		"astro": "5.18.2",
 		"astro-expressive-code": "0.44.2",
 		"astro-icon": "1.2.0",
@@ -35,20 +35,20 @@
 		"tailwindcss": "3.4.19"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.0.6",
+		"@biomejs/biome": "2.5.14",
 		"@playwright/test": "1.63.0",
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/typography": "0.5.20",
-		"@types/node": "22.20.4",
-		"start-server-and-test": "2.1.5",
-		"typescript": "5.9.3"
+		"@types/node": "24.13.6",
+		"start-server-and-test": "3.0.12",
+		"typescript": "6.0.3"
 	},
 	"engines": {
-		"node": "22.23.2"
+		"node": "24.21.0"
 	},
-	"packageManager": "pnpm@10.12.4",
+	"packageManager": "pnpm@12.5.1",
 	"volta": {
-		"node": "22.23.2",
-		"pnpm": "10.12.4"
+		"node": "24.21.0",
+		"pnpm": "12.5.1"
 	}
 }
