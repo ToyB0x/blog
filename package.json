@@ -40,7 +40,7 @@
 		"@tailwindcss/aspect-ratio": "0.4.2",
 		"@tailwindcss/typography": "0.5.20",
 		"@types/node": "22.20.4",
-		"start-server-and-test": "2.1.5",
+		"start-server-and-test": "3.0.12",
 		"typescript": "5.9.3"
 	},
 	"engines": {
