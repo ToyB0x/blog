@@ -7,7 +7,7 @@ import { defineConfig } from 'astro/config'
 import expressiveCode from 'astro-expressive-code'
 import icon from 'astro-icon'
 import rehypeExternalLinks from 'rehype-external-links'
-import remarkUnwrapImages from 'remark-unwrap-images'
+import rehypeUnwrapImages from 'rehype-unwrap-images'
 import { expressiveCodeOptions } from './src/site.config'
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 
@@ -17,8 +17,9 @@ export default defineConfig({
 	integrations: [expressiveCode(expressiveCodeOptions), sitemap(), mdx(), icon()],
 	markdown: {
 		processor: unified({
-			remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+			remarkPlugins: [remarkReadingTime],
 			rehypePlugins: [
+				rehypeUnwrapImages,
 				[
 					rehypeExternalLinks,
 					{
