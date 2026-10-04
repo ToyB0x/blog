@@ -5,7 +5,6 @@ import { getAllPosts, sortMDByDate } from '@/utils'
 import astro from '../assets/avatar/avatar.png'
 import Card from '../components/Card.astro'
 import Label from '../components/Label.astro'
-import ProjectCard from '../components/ProjectCard.astro'
 import Section from '../components/Section.astro'
 import SkillLayout from '../components/SkillLayout.astro'
 import PageLayout from '../layouts/BaseLayout.astro'
@@ -95,20 +94,20 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</p>
 		</Section>
 		<Section title='Publications'>
-			<ul class='flex flex-col gap-y-2'>
+			<ul class='flex flex-col gap-y-3'>
 				<li class='flex flex-col gap-x-2 sm:flex-row'>
-					<a href='https://gihyo.jp/article/2024/07/hosting-honeypot-on-cloud-01' target='_blank'>
+					<a href='https://gihyo.jp/list/group/作りながら学ぶAIエージェント' target='_blank' rel='noopener noreferrer'>
+						作りながら学ぶAIエージェント（技術評論社・連載）
+					</a>
+				</li>
+				<li class='flex flex-col gap-x-2 sm:flex-row'>
+					<a href='https://gihyo.jp/article/2024/07/hosting-honeypot-on-cloud-01' target='_blank' rel='noopener noreferrer'>
 						3大クラウド×日米両リージョンでハニーポットを動かしてみる (技術評論社様 寄稿記事)
 					</a>
 				</li>
 				<li class='flex flex-col gap-x-2 sm:flex-row'>
-					<a href='https://techbookfest.org/product/7YmreZxhKtPMKpq1LYXSkF' target='_blank'>
-						Pulumi を利用したエフェメラル環境でのインテグレーションテスト (技術書典)
-					</a>
-				</li>
-				<li class='flex flex-col gap-x-2 sm:flex-row'>
-					<a href='https://github.com/ToyB0x/batch-processing-best-practices' target='_blank'>
-						バッチ処理ベストプラクティス集 (OSS)
+					<a href='https://techbookfest.org/product/7YmreZxhKtPMKpq1LYXSkF' target='_blank' rel='noopener noreferrer'>
+						Pulumi を利用したエフェメラル環境でのインテグレーションテスト（技術書典）
 					</a>
 				</li>
 			</ul>
@@ -140,24 +139,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<Card heading='Freelance' subheading='Full Stack Developer' date='2015 - 2021' />
 		</Section>
 
-		<Section title='Projects'>
-			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
-				<ProjectCard
-					href='https://readx.me/@ToyB0x'
-					heading='Readx'
-					subheading='技術ドキュメント等のインプットを管理/共有するための実験的サービス'
-					imagePath='/src/assets/coming-soon.png'
-					altText='read-x'
-					class='w-full sm:w-1/2'
-				/>
-			</div>
-		</Section>
 
 		<Section title='Certifications'>
 			<Card
 				as='a'
 				heading='Professional Cloud Architect'
-				date='April 2024 - May 2026'
+				date='April 2024 - September 2027'
 				href='https://cloud.google.com/learn/certification/cloud-architect'
 			/>
 			<Card
