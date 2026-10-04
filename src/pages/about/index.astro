@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets'
+import Section from '@/components/Section.astro'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import avatar from '../../assets/avatar/avatar.png'
+---
+
+<PageLayout meta={{ title: 'About', description: 'ToyB0xの自己紹介と技術記事・活動について。' }}>
+	<div class='flex w-full flex-col gap-y-10'>
+		<section class='flex flex-col items-center gap-y-4'>
+			<Image src={avatar} alt='ToyB0xのプロフィール画像' class='h-28 w-auto p-2' loading='eager' />
+			<h1 class='text-3xl font-bold'>About</h1>
+			<p class='text-xl font-semibold'>ToyB0x</p>
+		</section>
+
+		<Section title='Profile'>
+			<p>TypeScript / Golang 等でお仕事しているエンジニアです。フロントエンドからサーバ側の開発まで取り組んでいます。</p>
+			<p>このブログでは、開発やインフラ運用で得た知見をまとめています。</p>
+		</Section>
+
+		<Section title='Publications'>
+			<ul class='flex flex-col gap-y-3'>
+				<li><a href='https://gihyo.jp/article/2024/07/hosting-honeypot-on-cloud-01' target='_blank' rel='noopener noreferrer'>3大クラウド×日米両リージョンでハニーポットを動かしてみる（技術評論社）</a></li>
+				<li><a href='https://techbookfest.org/product/7YmreZxhKtPMKpq1LYXSkF' target='_blank' rel='noopener noreferrer'>Pulumi を利用したエフェメラル環境でのインテグレーションテスト（技術書典）</a></li>
+				<li><a href='https://github.com/ToyB0x/batch-processing-best-practices' target='_blank' rel='noopener noreferrer'>バッチ処理ベストプラクティス集（OSS）</a></li>
+			</ul>
+		</Section>
+
+		<Section title='Links'>
+			<a href='https://github.com/ToyB0x' target='_blank' rel='noopener noreferrer'>GitHub</a>
+			<a href='/blog'>Blog</a>
+			<a href='https://docs.google.com/forms/d/e/1FAIpQLScBqA7bDNnqIuC_wOYxnPRctBQKAKWHIiRkkJvq9Wv_3aJYQA/viewform?usp=sf_link' target='_blank' rel='noopener noreferrer'>お問い合わせ</a>
+		</Section>
+	</div>
+</PageLayout>

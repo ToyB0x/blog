@@ -7,6 +7,7 @@ test('can open page correctly', async ({ page }) => {
 	await page.getByText('Blog').click()
 	await expect(page.getByRole('heading', { name: 'Blog' })).toBeVisible()
 
-	await page.getByText('Tools').click()
-	await expect(page.getByRole('heading', { name: 'Tools' })).toBeVisible()
+	await page.getByRole('link', { name: 'About', exact: true }).click()
+	await expect(page).toHaveURL('http://localhost:4321/about')
+	await expect(page.getByRole('heading', { name: 'About', exact: true })).toBeVisible()
 })
