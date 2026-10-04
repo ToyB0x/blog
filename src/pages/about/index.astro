@@ -5,7 +5,7 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 import avatar from '../../assets/avatar/avatar.png'
 ---
 
-<PageLayout meta={{ title: 'About', description: 'ToyB0xの自己紹介と技術記事・活動について。' }}>
+<PageLayout meta={{ title: 'About', description: 'ToyB0xの自己紹介、活動、ブログの利用技術とアバターの出典について。' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-4'>
 			<Image src={avatar} alt='ToyB0xのプロフィール画像' class='h-28 w-auto p-2' loading='eager' />
@@ -28,8 +28,27 @@ import avatar from '../../assets/avatar/avatar.png'
 
 		<Section title='Links'>
 			<a href='https://github.com/ToyB0x' target='_blank' rel='noopener noreferrer'>GitHub</a>
+			<a href='https://twitter.com/ToyB0x_' target='_blank' rel='noopener noreferrer'>X / Twitter</a>
+			<a href='https://www.instagram.com/toyb0x_' target='_blank' rel='noopener noreferrer'>Instagram</a>
 			<a href='/blog'>Blog</a>
 			<a href='https://docs.google.com/forms/d/e/1FAIpQLScBqA7bDNnqIuC_wOYxnPRctBQKAKWHIiRkkJvq9Wv_3aJYQA/viewform?usp=sf_link' target='_blank' rel='noopener noreferrer'>お問い合わせ</a>
+		</Section>
+		<Section title='このブログについて'>
+			<p>AstroとMDXで記事を管理し、Tailwind CSSでスタイルを整えています。サイトはVercelで公開しています。</p>
+			<p>ブログを立ち上げたときの技術選定は、<a href='/blog/blog-article-architecture'>本ブログの技術選定</a>にまとめています。記事で紹介している構成は当時のものです。</p>
+		</Section>
+
+		<Section title='アバターについて'>
+			<p>アバターには、<a href='https://pet-illust.com/' target='_blank' rel='noopener noreferrer'>Pet-illust様</a>の素材を利用しています。</p>
+		</Section>
+
+		<Section title='デザイン・テーマ'>
+			<p>このサイトのデザインと実装は、以下のテーマをベースにしています。</p>
+			<ul class='flex flex-col gap-y-3'>
+				<li><a href='https://github.com/chrismwilliams/astro-theme-cactus' target='_blank' rel='noopener noreferrer'>astro-theme-cactus</a> — ブログのデザイン</li>
+				<li><a href='https://github.com/srleom/astro-theme-resume' target='_blank' rel='noopener noreferrer'>astro-theme-resume</a> — Astroのコードベース</li>
+				<li><a href='https://minirezume.framer.website' target='_blank' rel='noopener noreferrer'>minirezume-framer</a> — ホームページのデザイン</li>
+			</ul>
 		</Section>
 	</div>
 </PageLayout>
