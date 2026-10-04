@@ -1,3 +1,9 @@
+# Wait three days after publication, including transitive dependencies.
+minimumReleaseAge: 4320
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+trustLockfile: false
+
 allowBuilds:
   esbuild: true
   sharp: true
