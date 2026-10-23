@@ -15,14 +15,14 @@
 		"test:e2e": "start-server-and-test 'pnpm start' localhost:4321 'playwright test'"
 	},
 	"dependencies": {
-		"@astrojs/check": "0.9.10",
+		"@astrojs/check": "0.9.11",
 		"@astrojs/markdown-remark": "7.3.3",
 		"@astrojs/mdx": "8.1.0",
 		"@astrojs/rss": "4.0.19",
 		"@astrojs/sitemap": "3.7.4",
-		"@astrojs/vercel": "11.0.15",
+		"@astrojs/vercel": "11.0.16",
 		"@vercel/analytics": "2.0.1",
-		"astro": "7.4.0",
+		"astro": "7.4.1",
 		"astro-expressive-code": "0.44.2",
 		"astro-icon": "1.2.0",
 		"clsx": "2.1.1",
@@ -44,11 +44,11 @@
 		"typescript": "6.0.3"
 	},
 	"engines": {
-		"node": "24.22.0"
+		"node": "24.22.1"
 	},
 	"packageManager": "pnpm@12.14.0",
 	"volta": {
-		"node": "24.22.0",
+		"node": "24.22.1",
 		"pnpm": "12.14.0"
 	}
 }
