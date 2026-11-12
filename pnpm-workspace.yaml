@@ -7,3 +7,10 @@ trustLockfile: false
 allowBuilds:
   esbuild: true
   sharp: true
+
+# @rolldown/binding-wasm32-wasi (optional) pulls in @emnapi/*@2.0.0-beta, and pnpm then
+# resolves @astrojs/check's optional peer @emnapi/runtime to that beta, which is
+# incompatible with the @emnapi/core 1.x used by @astrojs/astro2tsx and crashes `astro check`.
+overrides:
+  "@emnapi/core@2.0.0-beta.2": 1.11.3
+  "@emnapi/runtime@2.0.0-beta.2": 1.11.3
