@@ -1,0 +1,12 @@
+{
+	"name": "@toyb0x/zenn",
+	"private": true,
+	"scripts": {
+		"preview": "zenn preview",
+		"new:article": "zenn new:article",
+		"new:book": "zenn new:book"
+	},
+	"devDependencies": {
+		"zenn-cli": "0.5.14"
+	}
+}
