@@ -1,6 +1,3 @@
-packages:
-  - zenn
-
 # Wait three days after publication, including transitive dependencies.
 minimumReleaseAge: 4320
 minimumReleaseAgeStrict: true
